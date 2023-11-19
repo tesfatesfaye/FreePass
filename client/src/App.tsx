@@ -6,11 +6,11 @@ import "./App.css";
 // import LogoutButton from "./components/LogoutButton";
 import Profile from "./components/Profile";
 import client from "./graphql/apolloClient";
-interface ProfileProps {
-  name: string;
-  email: string;
-  picture?: string;
-}
+// interface ProfileProps {
+//   name: string;
+//   email: string;
+//   picture?: string;
+// }
 
 const App: FC = () => {
   // const { user, isAuthenticated} = useAuth0<ProfileProps>();
