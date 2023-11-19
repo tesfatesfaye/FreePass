@@ -1,0 +1,96 @@
+// schema.prisma
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id                  String               @id @default(uuid())
+  email               String               @unique
+  userFirstName       String
+  userLastName        String
+  profileAvatar       String?
+  serviceLogins       ServiceLogin[]
+  payments            Payment[]
+  secretNotes         SecretNote[]
+  socialSecurityCards SocialSecurityCard[]
+  documents           Document[]
+  createdOn           DateTime             @default(now())
+  lastModified        DateTime             @updatedAt
+}
+
+model ServiceLogin {
+  id            String   @id @default(uuid())
+  email         String?
+  userName      String?
+  socialSignIn  Boolean
+  password      String
+  website       String
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  isInFavorites Boolean  @default(false)
+  createdOn     DateTime @default(now())
+  lastModified  DateTime @updatedAt
+  userId        String
+}
+
+model Payment {
+  id                   String   @id @default(uuid())
+  nameOfCard           String
+  cardHolderFirstName  String
+  cardHolderLastName   String
+  type                 String
+  socialSecurityNumber Int
+  securityCode         Int
+  validThrough         DateTime
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar               String?
+  isInFavorites        Boolean  @default(false)
+  createdOn            DateTime @default(now())
+  lastModified         DateTime @updatedAt
+  userId               String
+}
+
+model SecretNote {
+  id            String   @id @default(uuid())
+  title         String
+  description   String
+  tags          String[]
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar        String?
+  isInFavorites Boolean  @default(false)
+  createdOn     DateTime @default(now())
+  lastModified  DateTime @updatedAt
+  userId        String
+}
+
+model SocialSecurityCard {
+  id                   String   @id @default(uuid())
+  firstName            String
+  lastName             String
+  socialSecurityNumber Int
+  dateOfIssue          DateTime
+  user                 User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar               String?
+  isInFavorites        Boolean  @default(false)
+  createdOn            DateTime @default(now())
+  lastModified         DateTime @updatedAt
+  userId               String
+}
+
+model Document {
+  id            String   @id @default(uuid())
+  title         String
+  description   String?
+  fileUpload    String? // URL to the file
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  avatar        String?
+  isInFavorites Boolean  @default(false)
+  createdOn     DateTime @default(now())
+  lastModified  DateTime @updatedAt
+  userId        String
+}
