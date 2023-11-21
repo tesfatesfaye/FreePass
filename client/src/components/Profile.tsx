@@ -8,7 +8,8 @@ interface ProfileProps {
 }
 const Profile: FC = () => {
   // const { user , isAuthenticated, isLoading } = useAuth0<ProfileProps>();
-  const { data } = useProfile("1f605d6c-97d0-4281-885b-87d420eb3ddc");
+  const { user } = useProfile("1f605d6c-97d0-4281-885b-87d420eb3ddc");
+  console.log("data",user?.email)
   // if (isLoading) {
   //   return <div>Loading ...</div>;
   // }
@@ -18,7 +19,7 @@ const Profile: FC = () => {
 
       {/* {isAuthenticated && user && ( */}
         <div>
-          <div>{data.user.email} </div>
+          <div>{user?.email} </div>
                  </div>
       {/* )} */}
     </>
