@@ -5,12 +5,10 @@ import Profile from "./components/Profile";
 import client from "./graphql/apolloClient";
 const App: FC = () => {
   return (
-    <div>
+    <div className="App">
       <ApolloProvider client={client}>
         <Profile />
-        <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      </ApolloProvider>
-      {/* )}  */}
+        </ApolloProvider>
     </div>
   );
 };
