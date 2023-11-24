@@ -6,8 +6,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        pbd:"rgb(54,54,54)",
-        pbcd:"rgb(44,44,44)",
+        "p-dark":"rgb(54,54,54)",
+        "s-dark":"rgb(44,44,44)",
+        "custom-gray":"rgb(120, 120, 120)"
         
       }
     },

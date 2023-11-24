@@ -7,10 +7,13 @@ const Navbar = () => {
     borderBottom:"1px solid rgb(40,40,40)"
   }
   return (
-    <nav  style={style}className="flex items-center justify-between flex-wrap bg-teal-500 p-2 ">
-      <TbFingerprintScan color="white" size={30}  />
+    <nav
+      style={style}
+      className="flex items-center justify-between flex-wrap p-2 py-3 bg-opacity-100"
+    >
+      <TbFingerprintScan color="white" size={30} />
       <SearchBar />
-      <Avatar/>
+      <Avatar />
     </nav>
   );
 };
