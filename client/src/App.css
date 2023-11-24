@@ -8,17 +8,12 @@ body,
   width: 100%;
   margin: 0;
   padding: 0;
-  background-color: #f5f7fb;
-
+  /* font-family: 'Roboto', sans-serif; */
 }
 
-.App {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+@layer component{
+  .avatar{
+    @apply flex justify-center items-center w-8 h-8 rounded-full border border-pbcd
+     text-pbd bg-white mr-2
+  }
 }
-
