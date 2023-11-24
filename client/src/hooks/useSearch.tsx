@@ -9,7 +9,7 @@ const searchFocus = () => {
 };
 const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
-    console.log(searchTerm);
+    
 }
 return { isSearching, searchFocus, handleSearch,searchTerm};
     
