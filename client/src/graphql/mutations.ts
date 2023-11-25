@@ -1,5 +1,5 @@
 import { gql } from "@apollo/client";
-import { GraphQLTypes } from "../types/graphQLtypes.js";
+import { GraphQLTypes } from "../types/graphqlTypes/graphQLtypes";
 import camelCase from "../utils/camelCase";
 
 export const generateCreateMutation = (type: GraphQLTypes, input: []) => {

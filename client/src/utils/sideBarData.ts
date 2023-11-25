@@ -1,5 +1,4 @@
 // Type: Utility
-import React from "react";
 import {
   FaIdCard as Id,
   FaKey as KeyIcon,
@@ -11,19 +10,6 @@ import {
 } from "react-icons/fa6";
 import { IoStarOutline as Favorite,IoDocumentText as Document } from "react-icons/io5";
 import { v4 as uuidv4 } from "uuid";
-interface SideBarMainItemsType {
-  id: string;
-  name: string;
-  icon: React.ElementType;
-}
-
-interface SideBarSubItemsType {
-  id: string;
-  name: string;
-  icon: React.ElementType;
-}
-
-
 
 const sideBarMain = [
   { id: uuidv4(), name: "All Secrets", icon: AllSecrets },
@@ -38,4 +24,3 @@ const sideBarSub = [
   {id: uuidv4(),name:"Documents",icon:Document}
 ];
 export { sideBarMain, sideBarSub};
-export type { SideBarMainItemsType, SideBarSubItemsType };
