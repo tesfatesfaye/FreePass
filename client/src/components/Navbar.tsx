@@ -2,7 +2,7 @@ import { TbFingerprintScan } from "react-icons/tb";
 import SearchBar from "./SearchBar";
 import Avatar from "./Avatar";
 const Navbar = () => {
-  const style={
+   const style={
     backgroundColor:"rgb(54,54,54)",
     borderBottom:"1px solid rgb(40,40,40)"
   }
@@ -14,7 +14,9 @@ const Navbar = () => {
       <TbFingerprintScan color="white" size={30} />
       <SearchBar />
       <Avatar />
+     
     </nav>
+    
   );
 };
 export default Navbar;

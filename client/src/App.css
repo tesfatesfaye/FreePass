@@ -5,16 +5,16 @@
   html,
   body,
   #root {
-    @apply h-full w-full m-0 p-0 bg-s-dark
+    @apply h-full w-full m-0 p-0 bg-s-dark;
     
   }
 }
 @layer component{
   .avatar{
     @apply flex justify-center items-center w-8 h-8 rounded-full border border-s-dark
-     text-custom-gray bg-white mr-2
+     text-custom-gray bg-white mr-2;
   }
   .profile{
-    @apply flex flex-col h-full w-full m-0 p-0
+    @apply flex flex-col h-full w-full m-0 p-0;
   }
 }
