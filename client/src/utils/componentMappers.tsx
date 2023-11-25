@@ -5,7 +5,7 @@ const sideBarMapper = (items: SideBarItem[]) => {
     return (
       <div
         key={item.id}
-        className="flex text-white items-center gap-2 ml-2 font-semibold mb-3 cursor-pointer "
+        className="flex text-white items-center gap-2 ml-2 font-semibold mb-3 cursor-pointer mr-auto"
       >
         <item.icon />
         {item.name}

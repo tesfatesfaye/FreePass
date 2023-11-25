@@ -1,4 +1,4 @@
-// Type: Utility
+// Template for static sidebar data
 import {
   FaIdCard as Id,
   FaKey as KeyIcon,
