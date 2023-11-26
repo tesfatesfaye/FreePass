@@ -7,7 +7,16 @@ const useSidebar = () => {
     useState<SideBarItem[]>(sideBarMain);
   const [sidebarSubItems, setSidebarSubItems] =
     useState<SideBarItem[]>(sideBarSub);
+    const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] =
+      useState<boolean>(true);
+    const [isTagsDropdownOpen, setIsTagsDropdownOpen] =useState<boolean>(true);
+    const toggleCategoriesDropdown = () => {
+      setIsCategoriesDropdownOpen(prev=>!prev);
+    };
+    const toggleTagsDropdown = () => {
+      setIsTagsDropdownOpen(prev=>!prev);
+    };
 
-  return { sidebarMainItems, sidebarSubItems };
+  return { sidebarMainItems, sidebarSubItems, isCategoriesDropdownOpen, isTagsDropdownOpen, toggleCategoriesDropdown, toggleTagsDropdown };
 };
 export default useSidebar;
