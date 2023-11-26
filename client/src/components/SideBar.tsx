@@ -27,7 +27,7 @@ const SideBar = () => {
           size={30}
           className={`${
             !isCategoriesDropdownOpen ? "transform rotate-180" : ""
-          } transition duration-300`}
+          } transition duration-200`}
         />
         <span className="flex items-center">Catagories</span>
       </div>
