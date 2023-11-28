@@ -17,7 +17,7 @@ const SideBar = () => {
   }, [isCategoriesDropdownOpen, isTagsDropdownOpen]);
 
   return (
-    <div className="sidebar pt-7 flex flex-col pl-1 w-1/6 bg-p-dark h-full">
+    <div className="sidebar pt-7 flex flex-col pl-1 w-1/6 bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"

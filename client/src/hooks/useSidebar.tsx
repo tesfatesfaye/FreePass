@@ -17,6 +17,8 @@ const useSidebar = () => {
       setIsTagsDropdownOpen(prev=>!prev);
     };
 
-  return { sidebarMainItems, sidebarSubItems, isCategoriesDropdownOpen, isTagsDropdownOpen, toggleCategoriesDropdown, toggleTagsDropdown };
+  return { sidebarMainItems, sidebarSubItems, 
+    isCategoriesDropdownOpen, isTagsDropdownOpen, 
+    toggleCategoriesDropdown, toggleTagsDropdown };
 };
 export default useSidebar;
