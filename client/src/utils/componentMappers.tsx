@@ -1,17 +1,11 @@
+import React from "react";
 import type { SideBarItem } from "../types/reactTypes/sideBarType";
+import SideBarItems from "../components/SideBarItems";
 // functions used for mapping react components
 const sideBarMapper = (items: SideBarItem[],height:boolean=true) => {
   return items.map((item) => {
     return (
-      <div
-        key={item.id}
-        className={`flex text-white items-center gap-2 ml-2 font-semibold mb-3 cursor-pointer mr-auto overflow-hidden transition-all duration-300 ${
-          height ? "" : "h-0 mb-0"
-        }`}
-      >
-        <item.icon />
-        {item.name}
-      </div>
+    <SideBarItems {...item} height={height} />
     );
   });
 };
