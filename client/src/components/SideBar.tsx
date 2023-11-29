@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { FC, useEffect } from "react";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
 import useSidebar from "../hooks/useSidebar";
-import { sideBarMapper } from "../utils/componentMappers";
-const SideBar = () => {
+import { sideBarMapper } from "../utils/sidebarMapper";
+import SideBarItem from "./SideBarItem";
+const SideBar:FC = () => {
   const {
     sidebarMainItems,
     sidebarSubItems,
@@ -18,7 +19,7 @@ const SideBar = () => {
 
   return (
     <div className="sidebar pt-7 flex flex-col pl-1 w-1/6 bg-p-dark h-full select-none">
-      {sideBarMapper(sidebarMainItems)}
+      {sideBarMapper(sidebarMainItems, SideBarItem)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"
         onClick={toggleCategoriesDropdown}
@@ -31,7 +32,7 @@ const SideBar = () => {
         />
         <span className="flex items-center">Catagories</span>
       </div>
-      {sideBarMapper(sidebarSubItems, isCategoriesDropdownOpen)}
+      {sideBarMapper(sidebarSubItems, SideBarItem, isCategoriesDropdownOpen)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-1 mb-1 cursor-pointer mr-auto"
         onClick={toggleTagsDropdown}

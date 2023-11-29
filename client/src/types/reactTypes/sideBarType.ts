@@ -1,10 +1,10 @@
 import React from "react";
 
-interface SideBarItem {
+interface SideBarItemType {
   id: string;
   name: string;
   icon: React.ElementType;
-  
+  isOpen?: boolean;
 }
 
-export type { SideBarItem}
+export type { SideBarItemType };
