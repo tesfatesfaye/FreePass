@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { SideBarItem } from "../types/reactTypes/sideBarType";
-import { sideBarMain, sideBarSub } from "../utils/sideBarData";
+import { sideBarMain, sideBarSub } from "../data/sideBarData";
 
 const useSidebar = () => {
   const [sidebarMainItems, setSidebarMainItems] =
