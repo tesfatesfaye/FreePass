@@ -1,12 +1,12 @@
 import { gql } from "@apollo/client";
 import { GraphQLTypes } from "../types/graphqlTypes/graphQLtypes";
-import camelCase from "../utils/camelCase";
+import makeCamelCase from "../utils/makeCamelCase";
 
 export const generateCreateMutation = (type: GraphQLTypes, input: []) => {
   const fields: string = input.join();
   return gql`
-    mutation Create${camelCase(type)}($input: Create${camelCase(type)}Input!) {
-      create${camelCase(type)}(input: $input) {
+    mutation Create${makeCamelCase(type)}($input: Create${makeCamelCase(type)}Input!) {
+      create${makeCamelCase(type)}(input: $input) {
                ${fields}
       }
     }
@@ -16,10 +16,10 @@ export const generateCreateMutation = (type: GraphQLTypes, input: []) => {
 export const generateUpdateMutation = (type: GraphQLTypes, input: string[]) => {
   const fields: string = input.join();
   return gql`
-    mutation Update${camelCase(type)}($id: ID!, $input: Update${camelCase(
+    mutation Update${makeCamelCase(type)}($id: ID!, $input: Update${makeCamelCase(
     type
   )}Input!) {
-      update${camelCase(type)}(id: $id, input: $input) {
+      update${makeCamelCase(type)}(id: $id, input: $input) {
         id
         ${fields}
       }
@@ -29,8 +29,8 @@ export const generateUpdateMutation = (type: GraphQLTypes, input: string[]) => {
 
 export const generateDeleteMutation = (type: GraphQLTypes) => {
   return gql`
-    mutation Delete${camelCase(type)}($id: ID!) {
-      delete${camelCase(type)}(id: $id) {
+    mutation Delete${makeCamelCase(type)}($id: ID!) {
+      delete${makeCamelCase(type)}(id: $id) {
         id
          
       }
