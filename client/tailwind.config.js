@@ -5,6 +5,11 @@ export default {
   darkMode: "class", // or 'media' or 'class
   theme: {
     extend: {
+       maxHeight: {
+        '0': '0',
+        '100': '25rem',
+        'full': '100%',
+      },
       colors: {
         "p-dark":"rgb(54,54,54)",
         "s-dark":"rgb(44,44,44)",
