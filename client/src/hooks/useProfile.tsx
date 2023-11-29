@@ -1,7 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
-import { generateQuery } from "../graphql/queries.js";
-import { GraphQLTypes } from "../types/graphqlTypes/graphQLtypes.js";
+import { generateQuery } from "../services/graphql/queries";
+import { GraphQLTypes } from "../types/graphqlTypes/graphQLtypes";
 
 const useProfile = (id: string) => {
   const [user, setUser] = useState(null);
