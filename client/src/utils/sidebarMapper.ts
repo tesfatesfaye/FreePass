@@ -1,6 +1,6 @@
 import { ElementType, createElement } from "react";
 import type { SideBarItemType } from "../types/reactTypes/sideBarType";
-// functions used for mapping react components
+// function used for mapping react components
 type SidebarItemComponent = ElementType<SideBarItemType>;
 const sideBarMapper = (
   items: SideBarItemType[],
