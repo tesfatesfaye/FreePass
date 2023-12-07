@@ -11,8 +11,8 @@ export default {
         'full': '100%',
       },
       colors: {
-        "p-dark":"rgb(54,54,54)",
-        "s-dark":"rgb(44,44,44)",
+        "p-dark":"rgb(40,40,40)",
+        "s-dark":"rgb(30,30,30)",
         "custom-gray":"rgb(120, 120, 120)"
         
       }
