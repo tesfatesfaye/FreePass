@@ -3,20 +3,17 @@ import SearchBar from "./SearchBar";
 import Avatar from "./Avatar";
 const Navbar = () => {
    const style={
-    backgroundColor:"rgb(54,54,54)",
-    borderBottom:"1px solid rgb(40,40,40)"
+    borderBottom:"1px solid rgb(50,50,50)"
   }
   return (
     <nav
       style={style}
-      className="flex items-center justify-between flex-wrap p-2 py-3 bg-opacity-100"
+      className="flex items-center justify-between flex-wrap p-2 py-2 bg-opacity-100 bg-p-dark"
     >
       <TbFingerprintScan color="white" size={30} />
       <SearchBar />
       <Avatar />
-     
     </nav>
-    
   );
 };
 export default Navbar;
