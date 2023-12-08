@@ -1,12 +1,12 @@
 import { useState } from "react";
-import type { SideBarItem } from "../types/reactTypes/sideBarType";
+import type { SideBarItemType } from "../types/reactTypes/sideBarType";
 import { sideBarMain, sideBarSub } from "../data/sideBarData";
 
 const useSidebar = () => {
   const [sidebarMainItems, setSidebarMainItems] =
-    useState<SideBarItem[]>(sideBarMain);
+    useState<SideBarItemType[]>(sideBarMain);
   const [sidebarSubItems, setSidebarSubItems] =
-    useState<SideBarItem[]>(sideBarSub);
+    useState<SideBarItemType[]>(sideBarSub);
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] =
       useState<boolean>(true);
     const [isTagsDropdownOpen, setIsTagsDropdownOpen] =useState<boolean>(true);
