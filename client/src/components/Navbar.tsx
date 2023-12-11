@@ -1,16 +1,10 @@
 import { FC } from "react";
 import { TbFingerprintScan } from "react-icons/tb";
-import SearchBar from "./SearchBar";
 import Avatar from "./Avatar";
-const Navbar:FC = () => {
-   const style={
-    borderBottom:"1px solid rgb(50,50,50)"
-  }
+import SearchBar from "./SearchBar";
+const Navbar: FC = () => {
   return (
-    <nav
-     
-      className="flex items-center justify-between flex-wrap p-2 py-2 bg-opacity-100 bg-p-dark border-b-t-dark"
-    >
+    <nav className="flex items-center justify-between flex-wrap p-2 py-2 bg-opacity-100 bg-p-dark border-b-t-dark">
       <TbFingerprintScan color="white" size={30} />
       <SearchBar />
       <Avatar />
