@@ -8,8 +8,8 @@ const Navbar:FC = () => {
   }
   return (
     <nav
-      style={style}
-      className="flex items-center justify-between flex-wrap p-2 py-2 bg-opacity-100 bg-p-dark"
+     
+      className="flex items-center justify-between flex-wrap p-2 py-2 bg-opacity-100 bg-p-dark border-b-t-dark"
     >
       <TbFingerprintScan color="white" size={30} />
       <SearchBar />

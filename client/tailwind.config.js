@@ -13,6 +13,7 @@ export default {
       colors: {
         "p-dark":"rgb(40,40,40)",
         "s-dark":"rgb(30,30,30)",
+        "t-dark":"rgb(50,50,50)",
         "custom-gray":"rgb(120, 120, 120)"
         
       }
