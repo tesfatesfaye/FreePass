@@ -5,18 +5,18 @@ export default {
   darkMode: "class", // or 'media' or 'class
   theme: {
     extend: {
-       maxHeight: {
-        '0': '0',
-        '100': '25rem',
-        'full': '100%',
+      maxHeight: {
+        0: "0",
+        100: "25rem",
+        full: "100%",
       },
       colors: {
-        "p-dark":"rgb(40,40,40)",
-        "s-dark":"rgb(30,30,30)",
-        "t-dark":"rgb(50,50,50)",
-        "custom-gray":"rgb(120, 120, 120)"
-        
-      }
+        "p-dark": "rgb(40,40,40)",
+        "s-dark": "rgb(30,30,30)",
+        "t-dark": "rgb(50,50,50)",
+        "font-dark": "#FF0706",
+        "custom-gray": "rgb(120, 120, 120)",
+      },
     },
   },
   plugins: [],

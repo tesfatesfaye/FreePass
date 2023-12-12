@@ -14,9 +14,6 @@ const useSidebar = () => {
     const toggleCategoriesDropdown = () => {
       setIsCategoriesDropdownOpen(prev=>!prev);
     };
-    const toggleSideBarItemSelection = (item: string) => {
-      setSelectedSidebarItem(item);
-    }
     const toggleTagsDropdown = () => {
       setIsTagsDropdownOpen(prev=>!prev);
     };
@@ -28,8 +25,8 @@ const useSidebar = () => {
     isTagsDropdownOpen,
     toggleCategoriesDropdown,
     toggleTagsDropdown,
-    toggleSideBarItemSelection,
-    selectedSidebarItem,
+    
+    
   };
 };
 export default useSidebar;
