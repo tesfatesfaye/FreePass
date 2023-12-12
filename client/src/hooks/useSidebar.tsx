@@ -5,7 +5,7 @@ import { sideBarMain, sideBarSub } from "../data/sideBarData";
 const useSidebar = () => {
   const [sidebarMainItems, setSidebarMainItems] =
     useState<SideBarItemType[]>(sideBarMain);
-    const [selectedSidebarMainItem, setSelectedSidebarMainItem] =useState<string>("All Secrets"); 
+    const [selectedSidebarItem, setSelectedSidebarItem] =useState<string>("All Secrets"); 
     const [sidebarSubItems, setSidebarSubItems] =
     useState<SideBarItemType[]>(sideBarSub);
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] =
@@ -15,14 +15,21 @@ const useSidebar = () => {
       setIsCategoriesDropdownOpen(prev=>!prev);
     };
     const toggleSideBarItemSelection = (item: string) => {
-      setSelectedSidebarMainItem(item);
+      setSelectedSidebarItem(item);
     }
     const toggleTagsDropdown = () => {
       setIsTagsDropdownOpen(prev=>!prev);
     };
 
-  return { sidebarMainItems, sidebarSubItems, 
-    isCategoriesDropdownOpen, isTagsDropdownOpen, 
-    toggleCategoriesDropdown, toggleTagsDropdown ,is};
+  return {
+    sidebarMainItems,
+    sidebarSubItems,
+    isCategoriesDropdownOpen,
+    isTagsDropdownOpen,
+    toggleCategoriesDropdown,
+    toggleTagsDropdown,
+    toggleSideBarItemSelection,
+    selectedSidebarItem,
+  };
 };
 export default useSidebar;
