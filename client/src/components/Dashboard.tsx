@@ -1,10 +1,14 @@
 import React from 'react';
+import Navbar from "./Navbar.tsx";
+import SideBar from "./SideBar.tsx";
 const DashBoard=()=>{
-    return(
-        <>
-            <h1>Dashboard</h1>
-        </>
-    )
+    return (
+      <>
+        
+        <Navbar />
+        <SideBar />
+      </>
+    );
 }
 
 export default DashBoard;
