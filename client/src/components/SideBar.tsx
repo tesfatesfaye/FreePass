@@ -1,9 +1,10 @@
-import { FC, useEffect } from "react";
+import { FC, useContext } from "react";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
+import { DashboardContext } from "../context/DashboardContext.tsx";
 import useSidebar from "../hooks/useSidebar";
 import { sideBarMapper } from "../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";
-const SideBar:FC = () => {
+const SideBar: FC = () => {
   const {
     sidebarMainItems,
     sidebarSubItems,
@@ -12,11 +13,8 @@ const SideBar:FC = () => {
     toggleCategoriesDropdown,
     toggleTagsDropdown,
   } = useSidebar();
-  useEffect(() => {
-    console.log(`isCategoriesDropdownOpen: ${isCategoriesDropdownOpen}`);
-    console.log(`isTagsDropdownOpen: ${isTagsDropdownOpen}`);
-  }, [isCategoriesDropdownOpen, isTagsDropdownOpen]);
 
+ 
   return (
     <div className="sidebar pt-7 flex flex-col pl-1 w-[250px] bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems, SideBarItem)}
