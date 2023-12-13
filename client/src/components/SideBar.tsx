@@ -1,6 +1,5 @@
-import { FC, useContext } from "react";
+import { FC } from "react";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
-import { DashboardContext } from "../context/DashboardContext.tsx";
 import useSidebar from "../hooks/useSidebar";
 import { sideBarMapper } from "../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";

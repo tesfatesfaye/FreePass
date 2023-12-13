@@ -5,7 +5,6 @@ import { sideBarMain, sideBarSub } from "../data/sideBarData";
 const useSidebar = () => {
   const [sidebarMainItems, setSidebarMainItems] =
     useState<SideBarItemType[]>(sideBarMain);
-    const [selectedSidebarItem, setSelectedSidebarItem] =useState<string>("All Secrets"); 
     const [sidebarSubItems, setSidebarSubItems] =
     useState<SideBarItemType[]>(sideBarSub);
     const [isCategoriesDropdownOpen, setIsCategoriesDropdownOpen] =
