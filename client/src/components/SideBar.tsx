@@ -24,7 +24,7 @@ const SideBar: FC = () => {
         <ChevronDown
           size={30}
           className={`${
-            !isCategoriesDropdownOpen ? "transform rotate-180" : ""
+            !isCategoriesDropdownOpen ? "transform rotate-270" : ""
           } transition duration-200`}
         />
         <span className="flex items-center">Catagories</span>
@@ -37,7 +37,7 @@ const SideBar: FC = () => {
         <ChevronDown
           size={30}
           className={`${
-            !isTagsDropdownOpen ? "transform rotate-180" : ""
+            !isTagsDropdownOpen ? "transform rotate-270" : ""
           } transition duration-200`}
         />
         <span className="flex items-center">Tags</span>

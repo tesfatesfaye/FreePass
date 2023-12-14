@@ -12,7 +12,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
           pr-auto overflow-hidden transition-all duration-300 text-lg
            ${props.isOpen ? " mb-3 h-auto" : "m-0 p-0 h-0"} ${
         props.name === sideBarItemIsSelected
-          ? "text-font-selected-dark bg-font-selected-dark bg-opacity-40"
+          ? "text-font-selected-dark bg-font-selected-dark bg-opacity-20"
           : " hover:bg-white hover:bg-opacity-10"
       } `}
     >

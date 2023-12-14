@@ -5,6 +5,9 @@ export default {
   darkMode: "class", // or 'media' or 'class
   theme: {
     extend: {
+       rotate: {
+        '270': '270deg',
+      },
       maxHeight: {
         0: "0",
         100: "25rem",
@@ -13,8 +16,8 @@ export default {
       colors: {
         "p-dark": "rgb(40,40,40)",
         "s-dark": "rgb(30,30,30)",
-        "t-dark": "rgb(50,50,50)",
-        "font-selected-dark": "rgb(120, 20, 26)",
+        "t-dark": "rgb(60,60,60)",
+        "font-selected-dark": "rgb(255, 255, 225)",
         "custom-gray": "rgb(120, 120, 120)",
       },
     },
