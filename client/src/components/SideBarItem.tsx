@@ -5,7 +5,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
   const { sideBarItemIsSelected, toggleSideBarItemSelection } =
     useContext(DashboardContext);
   return (
-    <div
+    <button
       key={props.id}
       onClick={() => toggleSideBarItemSelection(props.name)}
       className={`flex text-white items-center gap-2  pl-2 cursor-pointer 
@@ -18,7 +18,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
     >
       <props.icon />
       {props.name}
-    </div>
+    </button>
   );
 };
 export default SideBarItem;
