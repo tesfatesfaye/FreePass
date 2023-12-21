@@ -13,13 +13,13 @@ const SideBar: FC = () => {
     toggleTagsDropdown,
   } = useSidebar();
 
- 
   return (
     <div className="sidebar pt-7 flex flex-col pl-1 w-[300px] bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems, SideBarItem)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"
         onClick={toggleCategoriesDropdown}
+        tabIndex={0}
       >
         <ChevronDown
           size={30}
@@ -27,7 +27,9 @@ const SideBar: FC = () => {
             !isCategoriesDropdownOpen ? "transform rotate-270" : ""
           } transition duration-200`}
         />
-        <span className="flex items-center">Catagories</span>
+        <span className="flex items-center">
+          Catagories
+        </span>
       </div>
       {sideBarMapper(sidebarSubItems, SideBarItem, isCategoriesDropdownOpen)}
       <div
