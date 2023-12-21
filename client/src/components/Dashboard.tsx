@@ -1,12 +1,14 @@
-import Navbar from "./Navbar.tsx";
-import SideBar from "./SideBar.tsx";
 
-const DashBoard = () => {
+import SideBar from "./SideBar.tsx";
+import SecretParent from "./SecretParent.tsx";
+import { FC } from "react";
+const DashBoard:FC = () => {
   return (
-    <>
-      <Navbar />
+    <div className="flex h-full w-full">
+    
       <SideBar />
-    </>
+      <SecretParent/>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { FC } from "react";
-import useProfile from "../hooks/useProfile.tsx";
+// import useProfile from "../hooks/useProfile.tsx";
+import Navbar from "./Navbar.tsx";
 import { DashboardContextProvider } from "../context/DashboardContext.tsx";
 import DashBoard from "./Dashboard.tsx";
 const Profile: FC = () => {
@@ -8,6 +9,7 @@ const Profile: FC = () => {
   return (
     <div className="profile dark">
       <DashboardContextProvider>
+        <Navbar />
         <DashBoard />
       </DashboardContextProvider>
     </div>
