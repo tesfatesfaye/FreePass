@@ -3,6 +3,7 @@ import { GoChevronDown as ChevronDown } from "react-icons/go";
 import useSidebar from "../hooks/useSidebar";
 import { sideBarMapper } from "../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";
+import { v4 as uuid4 } from "uuid";
 const SideBar: FC = () => {
   const {
     sidebarMainItems,
@@ -14,7 +15,7 @@ const SideBar: FC = () => {
   } = useSidebar();
 
   return (
-    <div className="sidebar pt-7 flex flex-col pl-1 w-[300px] bg-p-dark h-full select-none">
+    <div key={uuid4()}className="sidebar pt-7 flex flex-col pl-1 w-[300px] bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems, SideBarItem)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"

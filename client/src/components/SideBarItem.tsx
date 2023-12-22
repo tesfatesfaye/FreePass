@@ -6,6 +6,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
 
   const { sideBarItemIsSelected, toggleSideBarItemSelection } =
     useContext(DashboardContext);
+
   return (
     <button
       key={props.id}
