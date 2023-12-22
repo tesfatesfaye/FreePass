@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
-import { GraphQLTypes } from "../types/graphqlTypes/graphQLtypes";
-import makeCamelCase from "../utils/makeCamelCase";
+import { GraphQLTypes } from "../../types/graphqlTypes/graphQLtypes";
+import makeCamelCase from "../../utils/makeCamelCase";
 
 export const generateCreateMutation = (type: GraphQLTypes, input: []) => {
   const fields: string = input.join();
