@@ -1,6 +1,6 @@
 import { FC } from "react";
-import SideBar from "../sidebar/SideBar.tsx";
-import SecretParent from "./Secrets.tsx";
+import SecretParent from "./secrets/Secrets.tsx";
+import SideBar from "./sidebar/SideBar.tsx";
 const DashBoard: FC = () => {
   return (
     <div className="flex h-full w-full">
