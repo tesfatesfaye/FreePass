@@ -1,9 +1,8 @@
 import { FC, useContext } from "react";
-import { DashboardContext } from "../context/DashboardContext";
-import type { SideBarItemType } from "../types/reactTypes/sideBarType";
+import { DashboardContext } from "../../context/DashboardContext";
+import type { SideBarItemType } from "../../types/reactTypes/sideBarType";
 
 const SideBarItem: FC<SideBarItemType> = (props) => {
-
   const { sideBarItemIsSelected, toggleSideBarItemSelection } =
     useContext(DashboardContext);
 

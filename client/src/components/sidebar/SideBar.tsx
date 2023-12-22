@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
-import useSidebar from "../hooks/useSidebar";
-import { sideBarMapper } from "../utils/sidebarMapper";
+import useSidebar from "../../hooks/useSidebar";
+import { sideBarMapper } from "../../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";
 const SideBar: FC = () => {
   const {
