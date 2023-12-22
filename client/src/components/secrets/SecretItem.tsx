@@ -1,4 +1,5 @@
 import { FC, useContext } from "react";
+import { FaRegTrashAlt as TrashIcon } from "react-icons/fa";
 import { TfiLayoutPlaceholder } from "react-icons/tfi";
 import { DashboardContext } from "../../context/DashboardContext";
 
@@ -36,6 +37,11 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <p className="text-white">Login</p>
         <p className="text-custom-gray text-sm">tesfaget15@gmail.com</p>
       </div>
+      {hoveredSecretItemId === props.id && (
+        <button className="ml-auto mr-2 text-white hover:text-red-600">
+          <TrashIcon className="" size={19} />
+        </button>
+      )}
     </div>
   );
 };

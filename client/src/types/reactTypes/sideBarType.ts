@@ -3,7 +3,7 @@ import React from "react";
 interface SideBarItemType {
   id: string;
   name: string;
-  icon: React.ElementType;
+  icon: string;
   isOpen?: boolean;
   
 }
