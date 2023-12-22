@@ -4,10 +4,9 @@ const SecretParent: FC = () => {
   const { secretParentHeight } = useContext(DashboardContext);
   return (
     <div
-      className={`flex w-[500px] max-h-[${secretParentHeight}] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto`}
-    >
-      
-    </div>
+     
+      className={`flex w-[500px] max-h-[${secretParentHeight}px] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto`}
+    ></div>
   );
 };
 
