@@ -5,7 +5,7 @@
   html,
   body,
   #root {
-    @apply h-full w-full m-0 p-0 bg-s-dark;
+    @apply h-full w-full m-0 p-0 bg-s-dark overflow-y-hidden;
     
   }
 }
