@@ -27,9 +27,7 @@ const SideBar: FC = () => {
             !isCategoriesDropdownOpen ? "transform rotate-270" : ""
           } transition duration-200`}
         />
-        <span className="flex items-center">
-          Catagories
-        </span>
+        <span className="flex items-center">Catagories</span>
       </div>
       {sideBarMapper(sidebarSubItems, SideBarItem, isCategoriesDropdownOpen)}
       <div

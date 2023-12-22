@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from "react";
+import { FC} from "react";
 import { TbFingerprintScan } from "react-icons/tb";
 import Avatar from "./Avatar";
 import SearchBar from "./SearchBar";

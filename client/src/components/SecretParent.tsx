@@ -2,7 +2,6 @@ import {FC, useContext } from "react";
 import { DashboardContext } from "../context/DashboardContext";
 const SecretParent:FC = () => {
 const {secretParentHeight} = useContext(DashboardContext)
-console.log(secretParentHeight)
 return (
   <div
     className={`flex w-[500px] max-h-[${secretParentHeight}] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto`}

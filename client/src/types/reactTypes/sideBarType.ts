@@ -5,6 +5,7 @@ interface SideBarItemType {
   name: string;
   icon: React.ElementType;
   isOpen?: boolean;
+  
 }
 
 export type { SideBarItemType };
