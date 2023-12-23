@@ -13,6 +13,7 @@ import {
   IoStarOutline as Favorite,
 } from "react-icons/io5";
 import { MdOutlineEmail as Email } from "react-icons/md";
+import { TbFingerprintScan as MainIcon } from "react-icons/tb";
 const icons = {
   AllSecrets,
   ChevronDown,
@@ -23,6 +24,7 @@ const icons = {
   Payment,
   Trash,
   Email,
+  MainIcon,
 };
 
 export default icons;
