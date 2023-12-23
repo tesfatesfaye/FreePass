@@ -2,10 +2,10 @@ import { FC, useContext } from "react";
 import { FaRegTrashAlt as TrashIcon } from "react-icons/fa";
 import { TfiLayoutPlaceholder } from "react-icons/tfi";
 import { DashboardContext } from "../../context/DashboardContext";
+import IconComponent from "../icons/IconComponent";
 
 interface SecretItemProps {
-  key: string;
-  id: string;
+    id: string;
 }
 
 const SecretItem: FC<SecretItemProps> = (props) => {
@@ -39,7 +39,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
       </div>
       {hoveredSecretItemId === props.id && (
         <button className="ml-auto mr-2 text-white hover:text-red-600">
-          <TrashIcon className="" size={19} />
+          <TrashIcon className="" size={15} />
         </button>
       )}
     </div>

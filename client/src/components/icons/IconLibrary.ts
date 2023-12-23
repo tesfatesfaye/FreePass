@@ -1,6 +1,6 @@
 import {
   FaIdCard as Id,
-  FaKey as login,
+  FaKey as Key,
   FaRegTrashAlt as Trash,
 } from "react-icons/fa";
 import {
@@ -18,7 +18,7 @@ const icons={
     Document,
     Favorite,
     Id,
-    login,
+    Key,
     Payment,
     Trash
 }

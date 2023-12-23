@@ -1,5 +1,4 @@
-import icons from "../../components/icons/IconLibrary";
-type IconNames = keyof typeof icons;
+import type { IconNames } from "./iconNamesTypes";
 interface SideBarItemType {
   id: string;
   name: string;
