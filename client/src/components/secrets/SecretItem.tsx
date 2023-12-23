@@ -18,7 +18,8 @@ const SecretItem: FC<SecretItemProps> = (props) => {
   } = useContext(DashboardContext);
   return (
     <div
-      className={`flex items-center gap-5 h-[70px] bg-p-dark border-b border-b-t-dark p-2 w-full cursor-pointer
+      className={`flex relative items-center gap-5 h-[70px] bg-p-dark border-b border-b-t-dark p-2 w-full cursor-pointer
+
         ${
           secretSelected === props.id
             ? "bg-white bg-opacity-20"
@@ -33,7 +34,6 @@ const SecretItem: FC<SecretItemProps> = (props) => {
           : null
       }
     >
-      
       <IconComponent
         type={props.type}
         subType={props.subType}
@@ -45,18 +45,19 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <span className="text-white">Login</span>
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
-          { props.subType &&
-          <IconComponent
-            type={props.type}
-            className="ml-auto mr-5  text-custom-gray"
-            size={10}
-          />}
+          {props.subType !== undefined && hoveredSecretItemId !== props.id && (
+            <IconComponent
+              type={props.type}
+              className="ml-auto mr-5  text-custom-gray"
+              size={10}
+            />
+          )}
         </span>
       </div>
       {hoveredSecretItemId === props.id && (
-        <button className="ml-auto mr-2 text-white hover:text-red-600">
-         <TrashIcon className="" size={15} />
-        </button>
+        <div className="ml-auto flex mb-0 pb-0 mr-2 text-white hover:text-red-600">
+          <TrashIcon className="" size={12} />
+        </div>
       )}
     </div>
   );
