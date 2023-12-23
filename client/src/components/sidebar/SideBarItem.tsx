@@ -2,7 +2,7 @@ import { FC, useContext } from "react";
 import { DashboardContext } from "../../context/DashboardContext";
 import type { SideBarItemType } from "../../types/reactTypes/sideBarType";
 import IconComponent from "../icons/IconComponent";
-import {v4 as uuidv4} from "uuid";
+
 
 const SideBarItem: FC<SideBarItemType> = (props) => {
   const { sideBarItemIsSelected, toggleSideBarItemSelection } =
@@ -24,7 +24,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
           : " hover:bg-white hover:bg-opacity-10"
       } `}
     >
-      <IconComponent id={uuidv4()} type={props.icon} />
+      <IconComponent type={props.icon} />
       {props.name}
     </button>
   );

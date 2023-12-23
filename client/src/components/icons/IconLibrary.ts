@@ -12,15 +12,17 @@ import {
   IoDocumentText as Document,
   IoStarOutline as Favorite,
 } from "react-icons/io5";
-const icons={
-    AllSecrets,
-    ChevronDown,
-    Document,
-    Favorite,
-    Id,
-    Key,
-    Payment,
-    Trash
-}
+import { MdOutlineEmail as Email } from "react-icons/md";
+const icons = {
+  AllSecrets,
+  ChevronDown,
+  Document,
+  Favorite,
+  Id,
+  Key,
+  Payment,
+  Trash,
+  Email,
+};
 
 export default icons;

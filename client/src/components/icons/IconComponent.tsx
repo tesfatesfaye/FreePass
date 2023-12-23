@@ -1,9 +1,9 @@
 import React, { FC } from "react";
+import { v4 as uuidv4 } from "uuid";
+import { IconNames } from "../../types/reactTypes/iconNamesTypes";
 import icons from "./IconLibrary";
 
-type IconNames = keyof typeof icons;
 interface IconComponentProps {
-  id: string;
   type: IconNames;
   size?: number;
   color?: string;
@@ -11,10 +11,11 @@ interface IconComponentProps {
   className?: string;
   style?: { [key: string]: string };
   attr?: { [key: string]: string | number | boolean };
+  subType?: IconNames;
 }
 
 const IconComponent: FC<IconComponentProps> = (props) => {
-  const Icon = icons[props.type] as React.ComponentType<
+  const Icon = icons[props.subType ?? props.type] as React.ComponentType<
     React.SVGProps<SVGSVGElement>
   >;
 
@@ -23,7 +24,7 @@ const IconComponent: FC<IconComponentProps> = (props) => {
     return null;
   }
 
-  return <Icon key={props.id} {...props} />;
+  return <Icon key={uuidv4()} {...props} />;
 };
 
 export default IconComponent;

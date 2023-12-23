@@ -4,6 +4,7 @@ interface SideBarItemType {
   name: string;
   icon: IconNames;
   isOpen?: boolean;
+  subType?: IconNames;
   
 }
 
