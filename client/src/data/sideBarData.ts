@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 const sideBarMain = [
   { id: uuidv4(), name: "All Secrets", icon: "AllSecrets" },
   { id: uuidv4(), name: "Favorites", icon: "Favorite" },
-  { id: uuidv4(), name: "Trash", icon: "Trash" },
+  { id: uuidv4(), name: "Deleted", icon: "Trash" },
 ];
 
 const sideBarSub = [

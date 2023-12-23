@@ -2,7 +2,7 @@ import { FC, useContext } from "react";
 import { FaRegTrashAlt as TrashIcon } from "react-icons/fa";
 import { DashboardContext } from "../../context/DashboardContext";
 import type { IconNames } from "../../types/reactTypes/iconNamesTypes";
-import IconComponent from "../icons/IconComponent";
+import Icon from "../icons/IconComponent";
 interface SecretItemProps {
   id: string;
   type: IconNames;
@@ -34,7 +34,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
           : null
       }
     >
-      <IconComponent
+      <Icon
         type={props.type}
         subType={props.subType}
         className="ml-1"
@@ -46,7 +46,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
           {props.subType !== undefined && hoveredSecretItemId !== props.id && (
-            <IconComponent
+            <Icon
               type={props.type}
               className="ml-auto mr-5  text-custom-gray"
               size={10}
