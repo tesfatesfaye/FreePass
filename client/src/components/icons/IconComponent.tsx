@@ -1,9 +1,10 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import icons from "./IconLibrary";
 
+type IconNames = keyof typeof icons;
 interface IconComponentProps {
   id: string;
-  type: string;
+  type: IconNames;
   size?: number;
   color?: string;
   title?: string;
@@ -13,8 +14,10 @@ interface IconComponentProps {
 }
 
 const IconComponent: FC<IconComponentProps> = (props) => {
-  const Icon = icons[props.type];
-      
+  const Icon = icons[props.type] as React.ComponentType<
+    React.SVGProps<SVGSVGElement>
+  >;
+
   if (!Icon) {
     console.warn(`Icon type '${props.type}' not found`);
     return null;

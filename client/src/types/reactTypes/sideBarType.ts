@@ -1,9 +1,9 @@
-import React from "react";
-
+import icons from "../../components/icons/IconLibrary";
+type IconNames = keyof typeof icons;
 interface SideBarItemType {
   id: string;
   name: string;
-  icon: string;
+  icon: IconNames;
   isOpen?: boolean;
   
 }
