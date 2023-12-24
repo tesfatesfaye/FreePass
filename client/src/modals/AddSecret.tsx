@@ -9,10 +9,13 @@ const AddSecret: FC = () => {
   if (currentModal !== "AddSecret") return null;
   const mapper=sideBarSub.map((item)=>{
     return (
-      <button key={v4()} className="flex items-center   bg-t-dark h-[50px]">
-        <IconComponent type={item.icon} size={30} className="ml-3 mr-auto"/>
+      <button
+        key={v4()}
+        className="flex items-center bg-t-dark h-[50px] hover:bg-white hover:bg-opacity-30"
+      >
+        <IconComponent type={item.icon} size={30} className="ml-3 mr-auto" />
         <p className="text-lg ml-auto mr-auto">{item.name}</p>
-        <IconComponent className="mr-3"type="Add" />
+        <IconComponent className="mr-3" type="Add" />
       </button>
     );
   })

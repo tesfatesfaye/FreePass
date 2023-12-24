@@ -15,15 +15,17 @@ const sideBarMain:SideBarData[] = [
 ];
 
 const sideBarSub: SideBarData[] = [
-  { id: v4(), name: "Login", icon: "Lock" },
-  { id: v4(), name: "Credit Card", icon: "Payment" },
+  { id: v4(), name: "Logins", icon: "Lock" },
+  { id: v4(), name: "Payment Cards", icon: "Payment" },
   { id: v4(), name: "Identity", icon: "Id" },
   { id: v4(), name: "Documents", icon: "Document" },
-  { id: v4(), name: "Passwords", icon: "Key" },
+  { id: v4(), name: "Passwords", icon: "Passwords" },
   { id: v4(), name: "Emails", icon: "Email" },
   { id: v4(), name: "Passports", icon: "Passport" },
   { id: v4(), name: "Bank Accounts", icon: "Bank" },
   { id: v4(), name: "Secure Notes", icon: "Notes" },
-  
+  { id: v4(), name: "API Keys", icon: "API" },
+  { id: v4(), name: "Memberships", icon: "Membership" },
+  { id: v4(), name: "Crypto Wallets", icon: "Wallet" },
 ];
 export { sideBarMain, sideBarSub };
