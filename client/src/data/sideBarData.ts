@@ -9,7 +9,7 @@ const sideBarMain = [
 ];
 
 const sideBarSub = [
-  { id: uuidv4(), name: "Login", icon: "Key" },
+  { id: uuidv4(), name: "Login", icon: "Lock" },
   { id: uuidv4(), name: "Credit Card", icon: "Payment" },
   { id: uuidv4(), name: "Identity", icon: "Id" },
   { id: uuidv4(), name: "Documents", icon: "Document" },

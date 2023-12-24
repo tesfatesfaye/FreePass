@@ -4,7 +4,7 @@ import SecretItem from "./SecretItem";
 const SecretParent: FC = () => {
   const { secretParentHeight } = useContext(DashboardContext);
   const secrets = Array.from({ length: 10 }, (j, i) => (
-    <SecretItem key={String(i)} id={String(i)} subtype="Email"type="Key" />
+    <SecretItem key={String(i)} id={String(i)} subtype="Email" type="Lock" />
   ));
   return (
     <div
