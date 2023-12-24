@@ -6,7 +6,7 @@ import Icon from "../icons/IconComponent";
 interface SecretItemProps {
   id: string;
   type: IconNames;
-  subType?: IconNames;
+  subtype?: IconNames;
 }
 
 const SecretItem: FC<SecretItemProps> = (props) => {
@@ -36,7 +36,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
     >
       <Icon
         type={props.type}
-        subType={props.subType}
+        subtype={props.subtype}
         className="ml-1"
         size={25}
         color={"white"}
@@ -45,7 +45,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <span className="text-white">Login</span>
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
-          {props.subType !== undefined && hoveredSecretItemId !== props.id && (
+          {props.subtype !== undefined && hoveredSecretItemId !== props.id && (
             <Icon
               type={props.type}
               className="ml-auto mr-5  text-custom-gray"
