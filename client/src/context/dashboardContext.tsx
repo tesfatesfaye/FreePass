@@ -9,6 +9,8 @@ interface DashboardContextType {
   updateHoveredSecretItemId: (id: string | null) => void;
   updateSecretSelected: (id: string | null) => void;
   secretSelected: string | null;
+  currentModal: string | null;
+  updateCurrentModal: (name: string | null) => void;
 }
 interface Props {
   children: ReactNode;
@@ -22,6 +24,8 @@ const DashboardContext = createContext<DashboardContextType>({
   updateHoveredSecretItemId: () => {},
   updateSecretSelected: () => {},
   secretSelected: null,
+  currentModal: null,
+  updateCurrentModal: () => {},
 });
 
 const DashboardContextProvider: React.FC<Props> = ({ children }) => {
@@ -39,7 +43,11 @@ const DashboardContextProvider: React.FC<Props> = ({ children }) => {
     null
   );
 
-  
+const [currentModal, setCurrentModal] = useState<string | null>(null);
+
+  const updateCurrentModal = (name: string | null) => {
+    setCurrentModal(name);
+  };
 
   const updateHoveredSecretItemId = (id: string | null) => {
     setHoveredSecretItemId(id);
@@ -61,9 +69,6 @@ const DashboardContextProvider: React.FC<Props> = ({ children }) => {
     };
   });
 
-  useEffect(() => {
-    
-  });
 
   return (
     <DashboardContext.Provider
@@ -75,6 +80,8 @@ const DashboardContextProvider: React.FC<Props> = ({ children }) => {
         updateHoveredSecretItemId,
         secretSelected,
         updateSecretSelected,
+        currentModal,
+        updateCurrentModal,
       }}
     >
       {children}

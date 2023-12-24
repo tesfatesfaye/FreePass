@@ -17,6 +17,7 @@ export default {
         "p-dark": "rgb(40,40,40)",
         "s-dark": "rgb(30,30,30)",
         "t-dark": "rgb(60,60,60)",
+        "font-dark": "rgb(255, 255, 255)",
         "font-selected-dark": "rgb(255, 255, 225)",
         "custom-gray": "rgb(120, 120, 120)",
       },

@@ -3,6 +3,7 @@ import { GoChevronDown as ChevronDown } from "react-icons/go";
 import useSidebar from "../../hooks/useSidebar";
 import { sideBarMapper } from "../../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";
+import IconComponent from "../icons/IconComponent";
 const SideBar: FC = () => {
   const {
     sidebarMainItems,
@@ -14,7 +15,7 @@ const SideBar: FC = () => {
   } = useSidebar();
 
   return (
-    <div className="sidebar pt-7 flex flex-col pl-1 w-[16%] bg-p-dark h-full select-none">
+    <div className="sidebar pt-7 flex flex-col  w-[16%] bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems, SideBarItem)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"
@@ -42,6 +43,9 @@ const SideBar: FC = () => {
         />
         <span className="flex items-center">Tags</span>
       </div>
+      <button className="flex mt-auto mb-10 ml-3 mr-3 py-2 gap-1 text-font-dark justify-center items-center rounded bg-t-dark">
+        <IconComponent type="Add" size={25}/>
+      </button>
     </div>
   );
 };

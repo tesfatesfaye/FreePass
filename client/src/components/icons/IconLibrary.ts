@@ -15,6 +15,7 @@ import {
 import { MdOutlineEmail as Email } from "react-icons/md";
 import { TbFingerprintScan as MainIcon } from "react-icons/tb";
 import { AiFillLock as Lock } from "react-icons/ai";
+import { IoMdAdd as Add } from "react-icons/io";
 const icons = {
   AllSecrets,
   ChevronDown,
@@ -27,6 +28,7 @@ const icons = {
   Email,
   MainIcon,
   Lock,
+  Add
 };
 
 export default icons;

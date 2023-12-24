@@ -6,7 +6,7 @@ const AddSecret: FC = () => {
   if (currentModal !== "AddSecret") return null;
   return (
     <Modal>
-      <div className="modal-container justify-center">
+      <div className="modal-container justify-center items-center">
         <div>Hello</div>
       </div>
     </Modal>

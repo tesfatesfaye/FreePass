@@ -1,4 +1,6 @@
-const Avatar = () => {
+import { FC } from "react";
+
+const Avatar:FC = () => {
 
   return (
     <div className="avatar">
