@@ -11,11 +11,11 @@ interface IconComponentProps {
   className?: string;
   style?: { [key: string]: string };
   attr?: { [key: string]: string | number | boolean };
-  subType?: IconNames;
+  subtype?: IconNames;
 }
 
 const IconComponent: FC<IconComponentProps> = (props) => {
-  const Icon = icons[props.subType ?? props.type] as React.ComponentType<
+  const Icon = icons[props.subtype ?? props.type] as React.ComponentType<
     React.SVGProps<SVGSVGElement>
   >;
 
