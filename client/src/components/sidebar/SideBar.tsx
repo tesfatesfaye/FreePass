@@ -14,7 +14,7 @@ const SideBar: FC = () => {
   } = useSidebar();
 
   return (
-    <div className="sidebar pt-7 flex flex-col pl-1 w-[300px] bg-p-dark h-full select-none">
+    <div className="sidebar pt-7 flex flex-col pl-1 w-[16%] bg-p-dark h-full select-none">
       {sideBarMapper(sidebarMainItems, SideBarItem)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"
