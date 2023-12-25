@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { v4 as uuidv4 } from "uuid";
+import { v4 } from "uuid";
 import { IconNames } from "../../types/reactTypes/iconNamesTypes";
 import icons from "./IconLibrary";
 
@@ -25,7 +25,7 @@ const IconComponent: FC<IconComponentProps> = (props) => {
     return null;
   }
 
-  return <Icon key={uuidv4()} {...props} />;
+  return <Icon key={v4()} {...props} />;
 };
 
 export default IconComponent;
