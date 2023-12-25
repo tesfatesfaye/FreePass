@@ -31,6 +31,7 @@ const SideBar: FC = () => {
         />
         <span className="flex items-center">Catagories</span>
       </div>
+   
       {sideBarMapper(sidebarSubItems, SideBarItem, isCategoriesDropdownOpen)}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-ml mt-1 mb-1 cursor-pointer mr-auto"
@@ -44,7 +45,7 @@ const SideBar: FC = () => {
         />
         <span className="flex items-center">Tags</span>
       </div>
-      <AddSecretButton />
+     
     </div>
   );
 };

@@ -12,7 +12,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
       key={props.id}
       onClick={() => toggleSideBarItemSelection(props.name)}
       className={`flex text-white items-center gap-2  pl-2 pt-0 pb-0 cursor-pointer 
-          pr-auto overflow-hidden transition-all duration-200 text-lg
+          pr-auto overflow-hidden transition-all duration-200 text-lg box-border
            ${
              props.isOpen
                ? " mb-2 max-h-[3rem] pt-[0.05rem] pb-[0.05rem]"
