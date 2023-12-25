@@ -5,7 +5,7 @@ import { sideBarSub } from "../data/sideBarData";
 import { v4 } from "uuid";
 import Modal from "./Modal";
 const AddSecret: FC = () => {
-  const { currentModal } = useContext(DashboardContext);
+  const { currentModal, updateCurrentModal } = useContext(DashboardContext);
   if (currentModal !== "AddSecret") return null;
   const mapper=sideBarSub.map((item)=>{
     return (
@@ -22,6 +22,16 @@ const AddSecret: FC = () => {
   return (
     <Modal>
       <div className="flex fixed top-0 left-0 right-0 bottom-0 z-50">
+        <span
+          className="cursor-pointer"
+          onClick={() => updateCurrentModal(null)}
+        >
+          <IconComponent
+            type="Close"
+            size={30}
+            className="absolute top-0 right-0 m-3 text-white"
+          />
+        </span>
         <div className="grid grid-cols-2 gap-1 py-10 gap-x-2 absolute top-[20%] left-[50%] px-5 w-[30%] transform -translate-x-1/2 h-auto bg-p-dark text-white rounded">
           {mapper}
         </div>

@@ -15,6 +15,7 @@ import { GoChevronDown as ChevronDown } from "react-icons/go";
 import {
   IoDocumentText as Notes,
   IoStarOutline as Favorite,
+  IoClose as Close,
 } from "react-icons/io5";
 import { BsBank2 as Bank } from "react-icons/bs";
 import { MdOutlineEmail as Email } from "react-icons/md";
@@ -41,6 +42,7 @@ const icons = {
   Membership,
   Passwords,
   Wallet,
+  Close
 
 };
 
