@@ -4,7 +4,6 @@ interface ModalProps {
     children: ReactNode;
     
 }
-
 const Modal: FC<ModalProps> = ({ children }) => {
 
     return (

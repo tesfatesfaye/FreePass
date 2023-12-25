@@ -7,25 +7,19 @@ interface SideBarData {
   id: string;
   name: string;
   icon: IconNames;
+  color?:string;
 }
-const sideBarMain:SideBarData[] = [
-  { id: v4(), name: "All Secrets", icon: "AllSecrets" },
-  { id: v4(), name: "Favorites", icon: "Favorite" },
-  { id: v4(), name: "Deleted", icon: "Trash" },
+const sideBarMain: SideBarData[] = [
+  { id: v4(), name: "All Secrets", icon: "AllSecrets", color: "#008080" },
+  { id: v4(), name: "Favorites", icon: "Favorite", color: "#f3f30dd2" },
+  { id: v4(), name: "Deleted", icon: "Trash", color: "#bb2d38" },
 ];
 
 const sideBarSub: SideBarData[] = [
-  { id: v4(), name: "Logins", icon: "Lock" },
-  { id: v4(), name: "Payment Cards", icon: "Payment" },
-  { id: v4(), name: "Identity", icon: "Id" },
-  { id: v4(), name: "Documents", icon: "Document" },
-  { id: v4(), name: "Passwords", icon: "Passwords" },
-  { id: v4(), name: "Emails", icon: "Email" },
-  { id: v4(), name: "Passports", icon: "Passport" },
-  { id: v4(), name: "Bank Accounts", icon: "Bank" },
-  { id: v4(), name: "Secure Notes", icon: "Notes" },
-  { id: v4(), name: "API Keys", icon: "API" },
-  { id: v4(), name: "Memberships", icon: "Membership" },
-  { id: v4(), name: "Crypto Wallets", icon: "Wallet" },
+  { id: v4(), name: "Logins", icon: "Lock", color: "#FFA500" },
+  { id: v4(), name: "Payment Cards", icon: "Payment", color: "#e8d4a7" },
+  { id: v4(), name: "Drivers License", icon: "Id", color: "#a2c4c9" },
+  { id: v4(), name: "Documents", icon: "Document", color: "#e5cca5" },
+  { id: v4(), name: "Bank Accounts", icon: "Bank", color: "#79e29a" },
 ];
 export { sideBarMain, sideBarSub };

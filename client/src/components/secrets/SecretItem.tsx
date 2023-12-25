@@ -7,13 +7,15 @@ interface SecretItemProps {
   id: string;
   type: IconNames;
   subtype?: IconNames;
+  hoveredSecretItemId: string | null;
+  updateHoveredSecretItemId: (id: string | null) => void;
 }
 
 const SecretItem: FC<SecretItemProps> = (props) => {
   const {
     updateSecretSelected,
-    updateHoveredSecretItemId,
-    hoveredSecretItemId,
+  
+
     secretSelected,
   } = useContext(DashboardContext);
   return (
@@ -27,10 +29,10 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         }
       `}
       onClick={() => updateSecretSelected(props.id)}
-      onMouseEnter={() => updateHoveredSecretItemId(props.id)}
+      onMouseEnter={() => props.updateHoveredSecretItemId(props.id)}
       onMouseLeave={() =>
-        hoveredSecretItemId === props.id
-          ? updateHoveredSecretItemId(null)
+        props.hoveredSecretItemId === props.id
+          ? props.updateHoveredSecretItemId(null)
           : null
       }
     >
@@ -45,7 +47,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <span className="text-white">Login</span>
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
-          {props.subtype !== undefined && hoveredSecretItemId !== props.id && (
+          {props.subtype !== undefined && props.hoveredSecretItemId !== props.id && (
             <Icon
               type={props.type}
               className="ml-auto mr-5  text-custom-gray"
@@ -54,7 +56,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
           )}
         </span>
       </div>
-      {hoveredSecretItemId === props.id && (
+      {props.hoveredSecretItemId === props.id && (
         <div className="ml-auto flex mb-0 pb-0 mr-2 text-white hover:text-red-600">
           <TrashIcon className="" size={12} />
         </div>

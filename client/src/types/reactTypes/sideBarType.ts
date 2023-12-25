@@ -5,6 +5,7 @@ interface SideBarItemType {
   icon: IconNames;
   isOpen?: boolean;
   subtype?: IconNames;
+  color?:string;
   
 }
 

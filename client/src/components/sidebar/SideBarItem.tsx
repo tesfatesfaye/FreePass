@@ -23,7 +23,7 @@ const SideBarItem: FC<SideBarItemType> = (props) => {
           : " hover:bg-white hover:bg-opacity-10"
       } `}
     >
-      <IconComponent type={props.icon} />
+      <IconComponent type={props.icon} color={props.color} />
       {props.name}
     </button>
   );

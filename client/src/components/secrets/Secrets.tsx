@@ -1,10 +1,17 @@
-import { FC, useContext } from "react";
-import { DashboardContext } from "../../context/DashboardContext";
+import { FC } from "react";
 import SecretItem from "./SecretItem";
+import useSecret from "../../hooks/useSecret";
 const SecretParent: FC = () => {
-  const { secretParentHeight } = useContext(DashboardContext);
+   const {hoveredSecretItemId, updateHoveredSecretItemId,secretParentHeight} = useSecret();
   const secrets = Array.from({ length: 10 }, (j, i) => (
-    <SecretItem key={String(i)} id={String(i)} subtype="Email" type="Lock" />
+    <SecretItem
+      key={String(i)}
+      id={String(i)}
+      subtype="Email"
+      type="Lock"
+      hoveredSecretItemId={hoveredSecretItemId}
+      updateHoveredSecretItemId={updateHoveredSecretItemId}
+    />
   ));
   return (
     <div
