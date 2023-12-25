@@ -17,7 +17,7 @@ const SecretParent: FC = () => {
   return (
     <div
       style={{ maxHeight: secretHeight }}
-      className={`flex flex-col w-[22%] px] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto  `}
+      className={`flex flex-col w-[22%] px] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto box-border `}
     >
       {secrets}
     </div>

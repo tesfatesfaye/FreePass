@@ -3,7 +3,6 @@ import { GoChevronDown as ChevronDown } from "react-icons/go";
 import useSidebar from "../../hooks/useSidebar";
 import { sideBarMapper } from "../../utils/sidebarMapper";
 import SideBarItem from "./SideBarItem";
-import AddSecretButton from "./AddSecretButton";
 
 const SideBar: FC = () => {
   const {
