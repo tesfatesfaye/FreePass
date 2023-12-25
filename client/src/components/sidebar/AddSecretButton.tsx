@@ -6,7 +6,8 @@ const AddSecretButton :FC= () => {
   return (
     <button
       onClick={() => updateCurrentModal("AddSecret")}
-      className="flex mt-auto mb-10 ml-3 mr-3 py-2 gap-1 text-font-dark justify-center items-center rounded bg-t-dark"
+      className="flex mt-auto mb-10 ml-3 mr-3 py-2 gap-1 text-font-dark justify-center items-center rounded
+       bg-t-dark hover:bg-white hover:bg-opacity-30"
     >
       <IconComponent type="Add" size={25} />
     </button>
