@@ -1,28 +1,27 @@
+import { AiFillLock as Lock } from "react-icons/ai";
+import { BsBank2 as Bank } from "react-icons/bs";
 import {
-  FaIdCard as Id,
   FaKey as API,
-  FaRegTrashAlt as Trash,
-  FaPassport as Passport,
   FaFolderOpen as Document,
+  FaIdCard as Id,
+  FaPassport as Passport,
+  FaRegTrashAlt as Trash,
+  FaStar as Favorite,
 } from "react-icons/fa";
-import { MdCardMembership as Membership} from "react-icons/md";
 import {
   FaLayerGroup as AllSecrets,
   FaCreditCard as Payment,
   FaWallet as Wallet,
 } from "react-icons/fa6";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
-import {
-  IoDocumentText as Notes,
-  IoStarOutline as Favorite,
-  IoClose as Close,
-} from "react-icons/io5";
-import { BsBank2 as Bank } from "react-icons/bs";
-import { MdOutlineEmail as Email } from "react-icons/md";
-import { TbFingerprintScan as MainIcon } from "react-icons/tb";
-import { AiFillLock as Lock } from "react-icons/ai";
 import { IoMdAdd as Add } from "react-icons/io";
-import { PiPasswordDuotone as Passwords } from "react-icons/pi"; 
+import { IoClose as Close, IoDocumentText as Notes } from "react-icons/io5";
+import {
+  MdOutlineEmail as Email,
+  MdCardMembership as Membership,
+} from "react-icons/md";
+import { PiPasswordDuotone as Passwords } from "react-icons/pi";
+import { TbFingerprintScan as MainIcon } from "react-icons/tb";
 const icons = {
   AllSecrets,
   ChevronDown,
@@ -42,8 +41,7 @@ const icons = {
   Membership,
   Passwords,
   Wallet,
-  Close
-
+  Close,
 };
 
 export default icons;

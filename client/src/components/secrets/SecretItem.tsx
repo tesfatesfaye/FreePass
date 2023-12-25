@@ -1,5 +1,4 @@
 import { FC, useContext } from "react";
-import { FaRegTrashAlt as TrashIcon } from "react-icons/fa";
 import { DashboardContext } from "../../context/DashboardContext";
 import type { IconNames } from "../../types/reactTypes/iconNamesTypes";
 import Icon from "../icons/IconComponent";
@@ -14,7 +13,6 @@ interface SecretItemProps {
 const SecretItem: FC<SecretItemProps> = (props) => {
   const {
     updateSecretSelected,
-  
 
     secretSelected,
   } = useContext(DashboardContext);
@@ -47,18 +45,19 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         <span className="text-white">Login</span>
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
-          {props.subtype !== undefined && props.hoveredSecretItemId !== props.id && (
-            <Icon
-              type={props.type}
-              className="ml-auto mr-5  text-custom-gray"
-              size={10}
-            />
-          )}
+          {props.subtype !== undefined &&
+            props.hoveredSecretItemId !== props.id && (
+              <Icon
+                type={props.type}
+                className="ml-auto mr-5  text-custom-gray"
+                size={10}
+              />
+            )}
         </span>
       </div>
       {props.hoveredSecretItemId === props.id && (
         <div className="ml-auto flex mb-0 pb-0 mr-2 text-white hover:text-red-600">
-          <TrashIcon className="" size={12} />
+          <Icon type="Trash" size={12} />
         </div>
       )}
     </div>
