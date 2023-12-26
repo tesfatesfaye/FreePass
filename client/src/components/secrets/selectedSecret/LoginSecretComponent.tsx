@@ -5,16 +5,21 @@ import Icon from "../../icons/IconComponent";
 const LoginSecretComponent: FC = () => {
   const { secretSelected, currentModal } = useContext(DashboardContext);
 
-  if (currentModal !== "Login") return null;
+  if (currentModal !== "Login" || secretSelected!=="Login") return null;
 
   return (
     <Modal>
       <div className=" flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3">
         <div className="flex gap-1 max-w-[100%] ml-2 mb-2 items-center box-border">
           <Icon type="Login" className="text-slate-300" size={45} />
-          <div className=" pl-3 flex box-border py-1 items-center text-slate-300 text-2xl font-semibold  bg-black bg-opacity-10 rounded-md flex-grow">
-            Login
-          </div>
+          <input className=" pl-3 flex box-border py-1 items-center text-slate-300 text-2xl font-semibold  bg-black bg-opacity-10 rounded-md flex-grow"
+          value="Login"
+          type="text"
+          name="title"
+          autoFocus
+          />
+           
+         
         </div>
         <form className="flex flex-col gap-1">
           <div className=" bg-black bg-opacity-40  w-auto rounded-md flex flex-col pl-3 pb-2">

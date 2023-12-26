@@ -6,7 +6,7 @@ interface SideBarItemType {
   isOpen?: boolean;
   subtype?: IconNames;
   color?:string;
-  
+ 
 }
 
 export type { SideBarItemType };

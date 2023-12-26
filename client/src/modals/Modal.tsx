@@ -24,7 +24,15 @@ const Modal: FC<ModalProps> = ({ children }) => {
             </button>
           </header>
           {children}
-          <footer className="flex items-center h-[3rem] mt-auto justify-between px-4 rounded-b-md bg-s-dark"></footer>
+          <footer className="flex items-center h-[3rem] mt-auto justify-between px-4 rounded-b-md bg-s-dark">
+            <button
+              className="text-slate-300
+               flex w-[5rem] items-center justify-center h-[2rem
+            ] bg-p-dark ml-auto mr-2 rounded"
+            >
+              Save
+            </button>
+          </footer>
         </div>
       </div>
     </ReactPortal>

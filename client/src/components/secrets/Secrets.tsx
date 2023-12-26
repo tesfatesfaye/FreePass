@@ -4,7 +4,7 @@ import useSecret from "../../hooks/useSecret";
 const SecretParent: FC = () => {
    const { hoveredSecretItemId, updateHoveredSecretItemId, secretHeight } =
      useSecret();
-  const secrets = Array.from({ length: 10 }, (j, i) => (
+  const secrets = Array.from({ length: 20 }, (j, i) => (
     <SecretItem
       key={String(i)}
       id={String(i)}
@@ -17,7 +17,7 @@ const SecretParent: FC = () => {
   return (
     <div
       style={{ maxHeight: secretHeight }}
-      className={`flex flex-col w-[22%] px] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto box-border `}
+      className={`flex flex-col w-[22%] px] bg-p-dark text-white  border-l border-l-t-dark  overflow-y-auto box-border  `}
     >
       {secrets}
     </div>
