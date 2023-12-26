@@ -9,7 +9,7 @@ const SecretParent: FC = () => {
       key={String(i)}
       id={String(i)}
       subtype="Email"
-      type="Lock"
+      type="Login"
       hoveredSecretItemId={hoveredSecretItemId}
       updateHoveredSecretItemId={updateHoveredSecretItemId}
     />

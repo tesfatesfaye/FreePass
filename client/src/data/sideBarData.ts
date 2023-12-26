@@ -16,7 +16,7 @@ const sideBarMain: SideBarData[] = [
 ];
 
 const sideBarSub: SideBarData[] = [
-  { id: v4(), name: "Logins", icon: "Lock", color: "#FFA500" },
+  { id: v4(), name: "Logins", icon: "Login", color: "#FFA500" },
   { id: v4(), name: "Payment Cards", icon: "Payment", color: "#e8d4a7" },
   { id: v4(), name: "Drivers License", icon: "Id", color: "#a2c4c9" },
   { id: v4(), name: "Documents", icon: "Document", color: "#e5cca5" },

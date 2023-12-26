@@ -1,29 +1,32 @@
-import { FC, ReactNode,useContext } from "react";
-import ReactPortal from "./ReactPortal";
+import { FC, ReactNode, useContext } from "react";
 import { DashboardContext } from "../context/DashboardContext";
+import ReactPortal from "./ReactPortal";
 interface ModalProps {
   children: ReactNode;
 }
 const Modal: FC<ModalProps> = ({ children }) => {
-
   const { currentModal, updateCurrentModal } = useContext(DashboardContext);
   return (
     <ReactPortal wrapperId="portal">
       <div className="modal-overlay"></div>
-      <div
-        className="flex flex-col fixed z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
-        h-[95%]   bg-p-dark rounded-md shadow-2xl w-[35%]"
-      >
-        <div className="flex items-center h-[6%] justify-between px-4 rounded-t-md bg-s-dark">
-          <h1 className="text-white text-lg  ml-auto mr-auto">Add Secret</h1>
-          <button onClick={()=>updateCurrentModal(null)}
-          className="text-white flex items-center text-lg font-bold mr-2">
-            X
-          </button>
+      <div className="modal-container">
+        <div
+          className="flex flex-col relative
+        h-[95%]   bg-p-dark rounded-md shadow-2xl w-[30%]  "
+        >
+          <header className="flex items-center h-[4rem] justify-between px-4 rounded-t-md bg-s-dark ">
+            <h1 className="text-white text-lg  ml-auto mr-auto">Add Secret</h1>
+            <button
+              onClick={() => updateCurrentModal(null)}
+              className="text-white flex items-center text-lg font-bold mr-2"
+            >
+              X
+            </button>
+          </header>
+          {children}
+          <footer className="flex items-center h-[3rem] mt-auto justify-between px-4 rounded-b-md bg-s-dark"></footer>
         </div>
       </div>
-
-      {children}
     </ReactPortal>
   );
 };

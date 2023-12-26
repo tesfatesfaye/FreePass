@@ -1,4 +1,4 @@
-import { AiFillLock as Lock } from "react-icons/ai";
+import { AiFillLock as Login } from "react-icons/ai";
 import { BsBank2 as Bank } from "react-icons/bs";
 import {
   FaKey as API,
@@ -28,7 +28,7 @@ const icons = {
   Document,
   Favorite,
   Id,
-  Lock,
+  Login,
   Payment,
   Trash,
   Email,
