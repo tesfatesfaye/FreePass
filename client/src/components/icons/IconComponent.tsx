@@ -13,7 +13,7 @@ interface IconComponentProps {
   attr?: { [key: string]: string | number | boolean };
   subtype?: IconNames;
   onClick?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
-}
+  }
 
 const IconComponent: FC<IconComponentProps> = (props) => {
   const Icon = icons[props.subtype ?? props.type] as React.ComponentType<
