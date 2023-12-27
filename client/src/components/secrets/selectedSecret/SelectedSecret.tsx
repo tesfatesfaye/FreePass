@@ -1,4 +1,4 @@
-import React,{FC,useEffect,useRef} from "react"; 
+import {FC,useEffect,useRef} from "react"; 
 import IconComponent from "../../icons/IconComponent";
 const SelectedSecret:FC = () => {
 const ref = useRef<HTMLDivElement | null>(null);
@@ -12,7 +12,8 @@ const ref = useRef<HTMLDivElement | null>(null);
   },)
 
     return (
-      <div ref={ref}className="text-white flex h-full flex-grow  items-center justify-center opacity-60">
+      <div ref={ref}className="text-white flex h-full flex-grow 
+       items-center justify-center opacity-60">
         <IconComponent type="MainIcon" size={175} />
       </div>
     );
