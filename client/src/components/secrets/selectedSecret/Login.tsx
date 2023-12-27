@@ -13,21 +13,22 @@ const LoginSecretComponent: FC = () => {
     <Modal>
       <div className=" flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3">
         <div className="relative flex gap-1 max-w-[100%] ml-2 mb-2 items-center box-border cursor-pointer">
-          <Icon type="PlaceHolder" className="text-slate-300" size={30} />
+          <Icon type="PlaceHolder" className="text-slate-300" size={40} />
           <Icon
             type="DownBackGround"
-            className="absolute left-4 top-7 text-slate-400  "
+            className="absolute left-6 top-7 text-slate-400  "
             size={15}
           />
-
-          <input
-            className=" pl-3 flex box-border py-1 items-center text-slate-300 text-2xl font-semibold 
-             bg-black bg-opacity-10 rounded-md flex-grow outline-none"
-            value="Login"
-            type="text"
-            name="title"
-            autoFocus
-          />
+          <div className="flex items-center gap-1 bg-black bg-opacity-10 rounded-md w-full pr-4 py-1 ">
+            <input
+              className=" w-full flex box-border rounded-md  bg-transparent items-center text-slate-300 text-2xl font-semibold 
+              flex-grow outline-none"
+              type="text"
+              name="title"
+              autoFocus
+            />
+            <Icon type="Favorite" className="text-slate-300" size={20} />
+          </div>
         </div>
         <form className="flex flex-col gap-[1.5px]">
           <div className=" bg-black bg-opacity-40  w-auto rounded-md flex flex-col pl-3 pb-2">
