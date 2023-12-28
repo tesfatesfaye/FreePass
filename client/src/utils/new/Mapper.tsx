@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 interface MapperProps<T> {
   Component: FC<T>;
   componentProps: T[];
-  isOpen?: boolean;
+
 }
 
 const Mapper=<T,>({
