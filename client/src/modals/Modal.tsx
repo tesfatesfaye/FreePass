@@ -26,7 +26,10 @@ const Modal: FC<ModalProps> = ({ children }) => {
               />
             </button>
           </header>
-          {children}
+           <div className="secret-form-parent ">
+             {children}
+            </div>
+         
           <footer className="flex items-center h-[3rem] mt-auto justify-between px-4 
           rounded-b-md bg-s-dark">
             <button
