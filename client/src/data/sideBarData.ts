@@ -7,7 +7,8 @@ interface SideBarData {
   id: string;
   name: string;
   icon: IconNames;
-  color?:string;
+  color?: string;
+  isCategory?: boolean;
 }
 const sideBarMain: SideBarData[] = [
   { id: v4(), name: "All Secrets", icon: "AllSecrets", color: "#008080" },
@@ -16,10 +17,40 @@ const sideBarMain: SideBarData[] = [
 ];
 
 const sideBarSub: SideBarData[] = [
-  { id: v4(), name: "Logins", icon: "Login", color: "#FFA500" },
-  { id: v4(), name: "Payment Cards", icon: "Payment", color: "#D3D3D3" },
-  { id: v4(), name: "Drivers License", icon: "Id", color: "#a2c4c9" },
-  { id: v4(), name: "Documents", icon: "Document", color: "#e5cca5" },
-  { id: v4(), name: "Bank Accounts", icon: "Bank", color: "#79e29a" },
+  {
+    id: v4(),
+    name: "Logins",
+    icon: "Login",
+    color: "#FFA500",
+    isCategory: true,
+  },
+  {
+    id: v4(),
+    name: "Payment Cards",
+    icon: "Payment",
+    color: "#D3D3D3",
+    isCategory: true,
+  },
+  {
+    id: v4(),
+    name: "Drivers License",
+    icon: "Id",
+    color: "#a2c4c9",
+    isCategory: true,
+  },
+  {
+    id: v4(),
+    name: "Documents",
+    icon: "Document",
+    color: "#e5cca5",
+    isCategory: true,
+  },
+  {
+    id: v4(),
+    name: "Bank Accounts",
+    icon: "Bank",
+    color: "#79e29a",
+    isCategory: true,
+  },
 ];
 export { sideBarMain, sideBarSub };
