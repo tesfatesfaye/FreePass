@@ -15,7 +15,7 @@ const ModalInput: FC <ModalInputProps> = ({ type, placeholder, name }) => {
       <label htmlFor={name} className="w-full">
         <input
           id={name}
-          className=" text-slate-400 bg-black bg-opacity-0  flex items-center w-full outline-none  "
+          className={` text-slate-400 bg-transparent flex items-center ${type==="date" ? 'w-fit' : 'w-full'} outline-none `}
           placeholder={type !== "date" ? placeholder : ""}
           type={type}
           name={name}
