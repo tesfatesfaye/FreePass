@@ -1,10 +1,9 @@
 import  { FC, ReactElement } from "react";
 import { v4 } from "uuid";
 
-interface MapperProps<T> {
+interface MapperProps<T>  {
   Component: FC<T>;
   componentProps: T[];
-
 }
 
 const Mapper=<T,>({
