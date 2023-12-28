@@ -3,7 +3,7 @@ import { createPortal } from "react-dom";
 
 interface ReactPortalProps {
   children: ReactNode;
-  wrapperId?: string;
+  wrapperId: string;
 }
 
 const createWrapperAndAppendToBody=(wrapperId:string)=>{
