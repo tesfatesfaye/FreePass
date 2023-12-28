@@ -16,18 +16,24 @@ const SideBarItem: FC<SideBarItemType> = ({id, name,icon, color,isOpen=true,moda
       className={`flex text-white items-center gap-2  pl-2 pt-0 pb-0 cursor-pointer 
           pr-auto overflow-hidden transition-all duration-200 text-lg box-border
            ${
-            isOpen === true 
+             isOpen === true
                ? " mb-2 max-h-[3rem] pt-[0.05rem] pb-[0.05rem]"
                : "m-0 p-0  max-h-0 "
            } ${
-       name === sideBarItemIsSelected
+        name === sideBarItemIsSelected
           ? " bg-white bg-opacity-20"
           : " hover:bg-white hover:bg-opacity-10"
       } `}
     >
       <Icon type={icon} color={color} />
       {name}
-      {modalValue!==undefined ? <Icon type="Add" className="ml-auto mr-4 hover:" onClick={(e)=>toggle(e,modalValue)}/> : null }
+      {modalValue !== undefined ? (
+        <Icon
+          type="Add"
+          className="ml-auto mr-4 text-slate-400 hover:text-white"
+          onClick={(e) => toggle(e, modalValue)}
+        />
+      ) : null}
     </button>
   );
 };
