@@ -12,15 +12,15 @@ const LoginSecretComponent: FC = () => {
 
   return (
     <Modal>
-      <div className=" flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3">
+     
         <TitleContainer type="Login" />
-        <form className="flex flex-col gap-[1.5px]">
+        <form className="secret-form">
           {loginInputsList}
-          <TextArea/>
+          <TextArea />
           <SSOToggle />
           <AddTags />
         </form>
-      </div>
+      
     </Modal>
   );
 };
