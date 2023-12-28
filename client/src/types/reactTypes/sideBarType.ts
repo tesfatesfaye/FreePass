@@ -6,6 +6,7 @@ interface SideBarItemType {
   isOpen?: boolean;
   subtype?: IconNames;
   color?:string;
+  isCategory?:boolean
  
 }
 
