@@ -1,22 +1,22 @@
 import { FC } from "react";
 import { GoChevronDown as ChevronDown } from "react-icons/go";
 import useSidebar from "../../hooks/useSidebar";
-import { sideBarMapper } from "../../utils/sidebarMapper";
+import Mapper from "../../utils/new/Mapper";
 import SideBarItem from "./SideBarItem";
 
 const SideBar: FC = () => {
   const {
     sidebarMainItems,
-    sidebarSubItems,
     isCategoriesDropdownOpen,
     isTagsDropdownOpen,
     toggleCategoriesDropdown,
     toggleTagsDropdown,
+    SidebarSubMapped,
   } = useSidebar();
 
   return (
     <div className="sidebar pt-7 flex flex-col  w-[16%] bg-p-dark h-full select-none">
-      {sideBarMapper(sidebarMainItems, SideBarItem)}
+      <Mapper Component={SideBarItem} componentProps={sidebarMainItems} />
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-l mt-4 mb-1 cursor-pointer"
         onClick={toggleCategoriesDropdown}
@@ -30,8 +30,7 @@ const SideBar: FC = () => {
         />
         <span className="flex items-center">Catagories</span>
       </div>
-   
-      {sideBarMapper(sidebarSubItems, SideBarItem, isCategoriesDropdownOpen)}
+      {SidebarSubMapped}
       <div
         className="flex text-custom-gray ml-2 gap-1 items-center text-ml mt-1 mb-1 cursor-pointer mr-auto"
         onClick={toggleTagsDropdown}
@@ -44,7 +43,6 @@ const SideBar: FC = () => {
         />
         <span className="flex items-center">Tags</span>
       </div>
-     
     </div>
   );
 };
