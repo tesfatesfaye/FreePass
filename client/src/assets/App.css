@@ -6,25 +6,26 @@
   body,
   #root {
     @apply h-full w-full m-0 p-0 bg-s-dark overflow-y-hidden;
-    
   }
 }
-@layer component{
-  .avatar{
+@layer component {
+  .avatar {
     @apply flex justify-center items-center w-8 h-8 rounded-full border border-s-dark
      text-custom-gray bg-s-dark mr-2;
   }
-  .profile{
+  .profile {
     @apply flex flex-col h-full w-full m-0 p-0;
   }
-  .modal-container{
+  .modal-container {
     @apply flex fixed top-0 left-0 right-0 bottom-0 z-50 justify-center items-center;
   }
-  .modal-overlay{
+  .modal-overlay {
     @apply fixed inset-0 top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40;
   }
- 
+  .secret-form {
+    @apply flex flex-col gap-[2.5px];
+  }
+  .secret-form-parent {
+    @apply flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3;
+  }
 }
-
-
-
