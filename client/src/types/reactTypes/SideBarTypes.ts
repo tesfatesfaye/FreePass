@@ -3,8 +3,7 @@ import { SideBarDataType } from "./SidebarDataType";
 
 interface SideBarItemType extends SideBarDataType {
   subtype?: IconNames;
-  modalValue?: string;
-  isOpen?: boolean;
+    isOpen?: boolean;
 }
 
 export type { SideBarItemType };
