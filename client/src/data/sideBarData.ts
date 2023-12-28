@@ -11,14 +11,13 @@ const sideBarMain: SideBarDataType[] = [
     name: "All Secrets",
     icon: "AllSecrets",
     color: "#008080",
-  
+    
   },
   {
     id: v4(),
     name: "Favorites",
     icon: "Favorite",
     color: "#f3f30dd2",
-  
   },
 
   { id: v4(), name: "Deleted", icon: "Trash", color: "#bb2d38" },
@@ -30,6 +29,7 @@ const sideBarSub: SideBarDataType[] = [
     name: "Logins",
     icon: "Login",
     color: "#FFA500",
+    modalValue: "Login",
   
   },
   {
@@ -37,27 +37,28 @@ const sideBarSub: SideBarDataType[] = [
     name: "Payment Cards",
     icon: "Payment",
     color: "#D3D3D3",
-  
+    modalValue: "Payment",
   },
   {
     id: v4(),
     name: "Drivers License",
     icon: "Id",
     color: "#a2c4c9",
-  
+    modalValue: "Id",
   },
   {
     id: v4(),
     name: "Documents",
     icon: "Document",
     color: "#e5cca5",
-  
+    modalValue: "Document",
   },
   {
     id: v4(),
     name: "Bank Accounts",
     icon: "Bank",
     color: "#79e29a",
+    modalValue: "Bank",
   
   },
 ];
