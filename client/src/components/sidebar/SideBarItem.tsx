@@ -1,14 +1,14 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useContext } from "react";
 import { DashboardContext } from "../../context/DashboardContext";
 import type { SideBarItemType } from "../../types/reactTypes/SideBarTypes";
 import Icon from "../icons/IconComponent";
+import useSidebarItem from "../../hooks/useSideBarItem";
 
-const SideBarItem: FC<SideBarItemType> = ({id, name,icon, color,isOpen=true}) => {
+
+const SideBarItem: FC<SideBarItemType> = ({id, name,icon, color,isOpen=true,modalValue}) => {
   const { sideBarItemIsSelected, toggleSideBarItemSelection } =
     useContext(DashboardContext);
-    useEffect(() => {
-      console.log(isOpen)
-    },[isOpen])
+  const {toggle}=useSidebarItem()
   return (
     <button
       key={id}
@@ -27,6 +27,7 @@ const SideBarItem: FC<SideBarItemType> = ({id, name,icon, color,isOpen=true}) =>
     >
       <Icon type={icon} color={color} />
       {name}
+      {modalValue!==undefined ? <Icon type="Add" className="ml-auto mr-4 hover:" onClick={(e)=>toggle(e,modalValue)}/> : null }
     </button>
   );
 };
