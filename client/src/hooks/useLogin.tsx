@@ -2,6 +2,7 @@ import {useState,FC} from 'react';
 import ModalInput from '../modals/UIcomponents/ModalInput';
 import { v4 } from 'uuid';
 import ToggleElement from '../modals/UIcomponents/ToggleElement';
+import TextArea from '../modals/UIcomponents/TextArea';
 const useLogin = () => {   
 
     const [sso,setSso] = useState<boolean>(false);
@@ -27,7 +28,7 @@ const useLogin = () => {
     
     })
 
-    return { sso, toggleSso, loginInputsList, SSOToggle };
+    return { sso, toggleSso, loginInputsList, SSOToggle ,TextArea};
 
 }
 
