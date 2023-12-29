@@ -29,23 +29,18 @@ const DashboardContextProvider: React.FC<Props> = ({ children }) => {
   const toggleSideBarItemSelection = (item: string) => {
     setSideBarItemIsSelected(item);
   };
- 
 
-const [currentModal, setCurrentModal] = useState<string | null>("Login");
+  const [currentModal, setCurrentModal] = useState<string | null>("ID");
 
   const updateCurrentModal = (name: string | null) => {
     setCurrentModal(name);
   };
 
- 
   const [secretSelected, setSecretSelected] = useState<string | null>(null);
 
   const updateSecretSelected = (id: string | null) => {
     setSecretSelected(id);
   };
-
- 
-
 
   return (
     <DashboardContext.Provider
