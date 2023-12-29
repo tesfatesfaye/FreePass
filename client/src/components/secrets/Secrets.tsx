@@ -21,7 +21,9 @@ const SecretParent: FC = () => {
 
   return (
     <div className="w-[22%] bg-p-dark border-l border-l-t-dark rounded overflow-hidden box-border h-full" style={{maxHeight:secretHeight}} >
-    <ScrollWrapper child={secrets} />
+    <ScrollWrapper>
+      {secrets}
+    </ScrollWrapper>
     </div>
   );
 };
