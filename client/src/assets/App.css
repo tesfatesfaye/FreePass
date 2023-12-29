@@ -8,6 +8,8 @@
     @apply h-full w-full m-0 p-0 bg-s-dark overflow-y-hidden;
   }
 }
+
+
 @layer component {
   .avatar {
     @apply flex justify-center items-center w-8 h-8 rounded-full border border-s-dark
