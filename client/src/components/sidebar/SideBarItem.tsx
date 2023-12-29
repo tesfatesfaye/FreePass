@@ -14,7 +14,7 @@ const SideBarItem: FC<SideBarItemType> = ({id, name,icon, color,isOpen=true,moda
       key={id}
       onClick={() => toggleSideBarItemSelection(name)}
       className={`flex text-white items-center gap-2  pl-2 pt-0 pb-0 cursor-pointer 
-          pr-auto overflow-hidden transition-all duration-200 text-lg box-border   rounded
+          pr-auto overflow-hidden transition-all duration-200 text-lg box-border rounded
            ${
              isOpen === true
                ? " mb-2 max-h-[3rem] pt-[0.05rem] pb-[0.05rem]"
