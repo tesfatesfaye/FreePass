@@ -1,3 +1,3 @@
-type SecretCategoryTypes = "Login" | "Payment" | "Id" | "Document" | "Bank"| undefined;
+type SecretCategoryTypes = "Login" | "Payment" | "ID" | "Document" | "Bank"| undefined;
 
 export type { SecretCategoryTypes};

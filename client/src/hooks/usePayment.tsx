@@ -1,22 +1,8 @@
 import { useState } from "react";
-import { v4 } from "uuid";
+import{paymentModalData} from '../data/secretsModalData'
 import ModalInput from "../modals/UIcomponents/ModalInput";
-import TextArea from "../modals/UIcomponents/TextArea";
-import AddTags from "../modals/UIcomponents/AddTags";
 const usePayment = () => {
-  const [paymentInputs] = useState([
-    {
-      id: v4(),
-      type: "text",
-      placeholder: "Card Holder Name",
-      name: "cardHolderName",
-    },
-    { id: v4(), type: "text", placeholder: "Card Number", name: "cardNumber" },
-    { id: v4(), type: "text", placeholder: "CVV", name: "cvv" },
-    { id: v4(), type: "text", placeholder: "PIN", name: "pin" },
-    { id: v4(), type: "date", placeholder: "", name: "validFrom" },
-    { id: v4(), type: "date", placeholder: "", name: "expiryDate" },
-  ]);
+  const [paymentInputs] = useState(paymentModalData);
 
   const paymentInputsList = paymentInputs.map((input) => {
     return (
@@ -29,7 +15,7 @@ const usePayment = () => {
     );
   });
 
-    return { paymentInputsList, TextArea, AddTags };
+    return { paymentInputsList };
 }
 
   export  { usePayment}
