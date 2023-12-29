@@ -1,3 +1,4 @@
+import  { blackA, mauve, violet } from "@radix-ui/colors"
 /** @type {import('tailwindcss').Config} */
 export default {
   purge: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -5,8 +6,8 @@ export default {
   darkMode: "class", // or 'media' or 'class
   theme: {
     extend: {
-       rotate: {
-        '270': '270deg',
+      rotate: {
+        270: "270deg",
       },
       maxHeight: {
         0: "0",
@@ -20,6 +21,9 @@ export default {
         "font-dark": "rgb(255, 255, 255)",
         "font-selected-dark": "rgb(255, 255, 225)",
         "custom-gray": "rgb(120, 120, 120)",
+        ...blackA,
+        ...mauve,
+        ...violet,
       },
     },
   },
