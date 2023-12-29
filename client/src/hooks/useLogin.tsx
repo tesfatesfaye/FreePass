@@ -2,7 +2,6 @@ import { FC, useState } from "react";
 import { v4 } from "uuid"
 import { loginModalData } from "../data/secretsModalData";
 import ModalInput from "../modals/UIcomponents/ModalInput";
-import TextArea from "../modals/UIcomponents/TextArea";
 import ToggleElement from "../modals/UIcomponents/ToggleElement";
 const useLogin = () => {
   const [sso, setSso] = useState<boolean>(false);
@@ -24,7 +23,7 @@ const useLogin = () => {
     );
   });
 
-  return { sso, toggleSso, loginInputsList, SSOToggle, TextArea};
+  return { sso, toggleSso, loginInputsList, SSOToggle};
 };
 
 export default useLogin;
