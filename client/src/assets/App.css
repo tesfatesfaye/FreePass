@@ -19,7 +19,8 @@
     @apply flex flex-col h-full w-full m-0 p-0;
   }
   .modal-container {
-    @apply flex fixed top-0 left-0 right-0 bottom-0 z-50 justify-center items-center;
+    @apply flex fixed top-0 left-0 right-0 bottom-3 z-50 justify-center items-center
+overflow-y-auto
   }
   .modal-overlay {
     @apply fixed inset-0 top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-40;
@@ -28,6 +29,6 @@
     @apply flex flex-col gap-[2.5px];
   }
   .secret-form-parent {
-    @apply flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3;
+    @apply flex flex-col w-auto ml-8 gap-3 box-border pt-5 mr-3 overflow-auto;
   }
 }
