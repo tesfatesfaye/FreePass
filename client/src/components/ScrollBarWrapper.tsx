@@ -2,7 +2,7 @@ import * as ScrollArea from "@radix-ui/react-scroll-area";
 import { FC, ReactElement } from "react";
 
 interface ScrollWrapperType {
-  child: ReactElement[];
+  child: ReactElement[] | ReactElement;
 }
 
 const ScrollWrapper: FC<ScrollWrapperType> = ({ child }) => {
