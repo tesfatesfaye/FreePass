@@ -1,15 +1,15 @@
 import * as ScrollArea from "@radix-ui/react-scroll-area";
-import { FC, ReactElement } from "react";
+import { FC, ReactElement, ReactNode } from 'react';
 
 interface ScrollWrapperType {
-  child: ReactElement[] | ReactElement;
+  children: ReactElement[] | ReactElement | ReactNode;
 }
 
-const ScrollWrapper: FC<ScrollWrapperType> = ({ child }) => {
+const ScrollWrapper: FC<ScrollWrapperType> = ({ children }) => {
   return (
     <ScrollArea.Root className="h-full w-full">
       <ScrollArea.Viewport className="w-full h-full rounded ">
-        {child}
+        {children}
       </ScrollArea.Viewport>
       <ScrollArea.Scrollbar
         className="flex select-none touch-none p-0.5 h-full bg-p-dark transition-colors duration-75  ease-out hover: data-[orientation=vertical]:w-2.5 "
