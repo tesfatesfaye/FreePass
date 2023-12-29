@@ -6,7 +6,7 @@ import ScrollWrapper from "../ScrollBarWrapper";
 const SecretParent: FC = () => {
   const { hoveredSecretItemId, updateHoveredSecretItemId, secretHeight } =
     useSecret();
-  const secrets = Array.from({ length: 15 }, (_, i) => (
+  const secrets = Array.from({ length: 20 }, (_, i) => (
     <SecretItem
       key={String(i)}
       id={String(i)}
