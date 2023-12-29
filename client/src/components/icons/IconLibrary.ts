@@ -4,7 +4,7 @@ import {
   FaKey as API,
   FaFolderOpen as Document,
   FaStar as Favorite,
-  FaIdCard as Id,
+  FaIdCard as ID,
   FaPassport as Passport,
   FaRegTrashAlt as Trash,
 } from "react-icons/fa";
@@ -34,7 +34,7 @@ const icons = {
   ChevronDown,
   Document,
   Favorite,
-  Id,
+  ID,
   Login,
   Payment,
   Trash,
