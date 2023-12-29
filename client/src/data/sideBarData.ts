@@ -42,9 +42,9 @@ const sideBarSub: SideBarDataType[] = [
   {
     id: v4(),
     name: "Drivers License",
-    icon: "Id",
+    icon: "ID",
     color: "#a2c4c9",
-    modalValue: "Id",
+    modalValue: "ID",
   },
   {
     id: v4(),
