@@ -18,7 +18,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
   } = useContext(DashboardContext);
   return (
     <div
-      className={`flex relative items-center gap-5 h-[70px] bg-p-dark border-b border-b-t-dark p-2 w-full cursor-pointer
+      className={`flex relative items-center gap-5 h-[70px] bg-p-dark border-b border-b-t-dark  p-2 w-full cursor-pointer
 
         ${
           secretSelected === props.id
