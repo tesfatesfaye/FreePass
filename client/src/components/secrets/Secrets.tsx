@@ -1,7 +1,7 @@
 import { FC } from "react";
 import useSecret from "../../hooks/useSecret";
-import SecretItem from "./SecretItem";
 import ScrollWrapper from "../ScrollBarWrapper";
+import SecretItem from "./SecretItem";
 const SecretParent: FC = () => {
   const { hoveredSecretItemId, updateHoveredSecretItemId, secretHeight } =
     useSecret();
@@ -15,14 +15,13 @@ const SecretParent: FC = () => {
       updateHoveredSecretItemId={updateHoveredSecretItemId}
     />
   ));
-  // other code...
-
 
   return (
-    <div className="w-[22%] bg-p-dark border-l border-l-t-dark rounded overflow-hidden box-border h-full" style={{maxHeight:secretHeight}} >
-    <ScrollWrapper>
-      {secrets}
-    </ScrollWrapper>
+    <div
+      className="w-[22%] bg-p-dark border-l border-l-t-dark rounded overflow-hidden box-border h-full"
+      style={{ maxHeight: secretHeight }}
+    >
+      <ScrollWrapper>{secrets}</ScrollWrapper>
     </div>
   );
 };
