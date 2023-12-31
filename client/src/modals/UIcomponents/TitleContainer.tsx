@@ -12,7 +12,7 @@ const TitleContainer: FC<TitleContainerProps> = ({ type }) => {
       <Icon type="PlaceHolder" className="text-slate-300" size={40} />
       <Icon
         type="DownBackGround"
-        className="absolute left-6 top-7 text-slate-400  "
+        className="absolute left-6 top-7 text-slate-400"
         size={15}
       />
       <div className="flex items-center gap-1 bg-black bg-opacity-10 rounded-md w-full pr-4 py-1 ">
