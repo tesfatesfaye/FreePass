@@ -24,7 +24,11 @@ const TitleContainer: FC<TitleContainerProps> = ({ type }) => {
           value={type}
           autoFocus
         />
-        <Icon type="Favorite" className="text-slate-300" size={20} />
+        <Icon
+          type="Favorite"
+          className="text-slate-300 hover:text-[#f3f30dd2]"
+          size={20}
+        />
       </div>
     </div>
   );
