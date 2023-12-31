@@ -1,4 +1,3 @@
-import "../../assets/App.css"
 import { FC } from "react";
 import useSecret from "../../hooks/useSecret";
 import SecretItem from "./SecretItem";
