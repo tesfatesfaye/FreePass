@@ -26,7 +26,7 @@ const Modal: FC<ModalProps> = ({ children }) => {
             />
             <button onClick={() => updateCurrentModal(null)}>
               <Icon
-                className="text-white flex items-center text-lg font-bold mr-2"
+                className="text-slate-400 flex items-center text-lg font-bold mr-2 hover:text-white"
                 type="Close"
                 size={25}
               />
