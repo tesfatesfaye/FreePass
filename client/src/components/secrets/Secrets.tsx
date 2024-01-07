@@ -5,7 +5,7 @@ import SecretItem from "./SecretItem";
 const SecretParent: FC = () => {
   const { hoveredSecretItemId, updateHoveredSecretItemId, secretHeight } =
     useSecret();
-  const secrets = Array.from({ length: 40 }, (_, i) => (
+  const secrets = Array.from({ length: 30 }, (_, i) => (
     <SecretItem
       key={String(i)}
       id={String(i)}
