@@ -42,7 +42,7 @@ const SecretItem: FC<SecretItemProps> = (props) => {
         color={"white"}
       />
       <div className="flex flex-col gap-1 h-full mt-3 w-full">
-        <span className="text-white">Login</span>
+        <span className="text-white">Login </span>
         <span className="text-custom-gray text-m flex w-full ">
           <small>tesfaget15@gmail.com</small>
           {props.subtype !== undefined &&
